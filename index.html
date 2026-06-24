@@ -54,7 +54,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Main Style Sheet -->
-    <link rel="stylesheet" href="style.css?v=1.6">
+    <link rel="stylesheet" href="style.css?v=1.7">
 </head>
 <body>
 
@@ -88,8 +88,8 @@
                     <path d="M 49 42 L 61 42 M 55 42 L 55 58" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" class="logo-t"/>
                 </svg>
             </div>
-            <h2 class="preloader-title">CUSCO TRAVEL</h2>
-            <p class="preloader-text">Preparando su experiencia de lujo...</p>
+            <h2 class="preloader-title" data-lang-key="preloader-title">CUSCO TRAVEL</h2>
+            <p class="preloader-text" data-lang-key="preloader-text">Preparando su experiencia de lujo...</p>
         </div>
     </div>
 
@@ -103,12 +103,12 @@
             <!-- Desktop Menu -->
             <nav class="desktop-nav" aria-label="Main Navigation">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active" id="nav-home">Inicio</a></li>
-                    <li><a href="#destinations" class="nav-link" id="nav-destinations">Destinos</a></li>
-                    <li><a href="#tours" class="nav-link" id="nav-tours">Tours</a></li>
-                    <li><a href="#experiences" class="nav-link" id="nav-experiences">Experiencias</a></li>
-                    <li><a href="#gallery" class="nav-link" id="nav-gallery">Galería</a></li>
-                    <li><a href="#contact" class="nav-link" id="nav-contact">Contacto</a></li>
+                    <li><a href="#home" class="nav-link active" id="nav-home" data-lang-key="nav-home">Inicio</a></li>
+                    <li><a href="#destinations" class="nav-link" id="nav-destinations" data-lang-key="nav-destinations">Destinos</a></li>
+                    <li><a href="#tours" class="nav-link" id="nav-tours" data-lang-key="nav-tours">Tours</a></li>
+                    <li><a href="#experiences" class="nav-link" id="nav-experiences" data-lang-key="nav-experiences">Experiencias</a></li>
+                    <li><a href="#gallery" class="nav-link" id="nav-gallery" data-lang-key="nav-gallery">Galería</a></li>
+                    <li><a href="#contact" class="nav-link" id="nav-contact" data-lang-key="nav-contact">Contacto</a></li>
                 </ul>
             </nav>
 
@@ -120,6 +120,13 @@
                 <div class="intel-divider">|</div>
                 <div class="intel-item"><span class="intel-status">SANTUARIO: ABIERTO</span></div>
             </div>
+
+            <!-- Language Toggle Button -->
+            <button class="lang-toggle-btn" id="lang-toggle" aria-label="Cambiar idioma">
+                <span class="lang-current">ES</span>
+                <span class="lang-divider">|</span>
+                <span class="lang-alt">EN</span>
+            </button>
 
             <!-- Theme Toggle Button -->
             <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema">
@@ -152,12 +159,12 @@
     <div class="mobile-menu-overlay" id="mobile-menu">
         <div class="mobile-menu-content">
             <ul class="mobile-nav-list">
-                <li><a href="#home" class="mobile-nav-link" id="mob-home">Inicio</a></li>
-                <li><a href="#destinations" class="mobile-nav-link" id="mob-destinations">Destinos</a></li>
-                <li><a href="#tours" class="mobile-nav-link" id="mob-tours">Tours</a></li>
-                <li><a href="#experiences" class="mobile-nav-link" id="mob-experiences">Experiencias</a></li>
-                <li><a href="#gallery" class="mobile-nav-link" id="mob-gallery">Galería</a></li>
-                <li><a href="#contact" class="mobile-nav-link" id="mob-contact">Contacto</a></li>
+                <li><a href="#home" class="mobile-nav-link" id="mob-home" data-lang-key="mob-home">Inicio</a></li>
+                <li><a href="#destinations" class="mobile-nav-link" id="mob-destinations" data-lang-key="mob-destinations">Destinos</a></li>
+                <li><a href="#tours" class="mobile-nav-link" id="mob-tours" data-lang-key="mob-tours">Tours</a></li>
+                <li><a href="#experiences" class="mobile-nav-link" id="mob-experiences" data-lang-key="mob-experiences">Experiencias</a></li>
+                <li><a href="#gallery" class="mobile-nav-link" id="mob-gallery" data-lang-key="mob-gallery">Galería</a></li>
+                <li><a href="#contact" class="mobile-nav-link" id="mob-contact" data-lang-key="mob-contact">Contacto</a></li>
             </ul>
             <div class="mobile-menu-footer">
                 <p>📍 Cusco, Perú</p>
@@ -176,9 +183,9 @@
                 <div class="slide-bg" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.9)), url('assets/machu_picchu.png');"></div>
                 <div class="container hero-content-container">
                     <div class="hero-text-wrapper">
-                        <h1 class="hero-title">VISITE<br><span class="highlight">CUSCO</span></h1>
-                        <p class="hero-subtitle">Descubra la mágica capital del Imperio Inca. Historia milenaria, paisajes imponentes y experiencias de lujo inolvidables le esperan.</p>
-                        <a href="#destinations" class="btn btn-hero" id="explore-btn-1">EXPLORAR CUSCO <span class="arrow">→</span></a>
+                        <h1 class="hero-title" data-lang-key="slide-1-title">VISITE<br><span class="highlight">CUSCO</span></h1>
+                        <p class="hero-subtitle" data-lang-key="slide-1-sub">Descubra la mágica capital del Imperio Inca. Historia milenaria, paisajes imponentes y experiencias de lujo inolvidables le esperan.</p>
+                        <a href="#destinations" class="btn btn-hero" id="explore-btn-1" data-lang-key="slide-1-btn">EXPLORAR CUSCO <span class="arrow">→</span></a>
                     </div>
                 </div>
             </div>
@@ -187,9 +194,9 @@
                 <div class="slide-bg" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.9)), url('assets/sacsayhuaman.png');"></div>
                 <div class="container hero-content-container">
                     <div class="hero-text-wrapper">
-                        <h1 class="hero-title">PIEDRAS<br><span class="highlight">SAGRADAS</span></h1>
-                        <p class="hero-subtitle">Sacsayhuamán se erige como un testimonio monumental de la ingeniería inca. Contemple colosales estructuras de piedra talladas con precisión impecable.</p>
-                        <a href="#destinations" class="btn btn-hero" id="explore-btn-2">EXPLORAR CUSCO <span class="arrow">→</span></a>
+                        <h1 class="hero-title" data-lang-key="slide-2-title">PIEDRAS<br><span class="highlight">SAGRADAS</span></h1>
+                        <p class="hero-subtitle" data-lang-key="slide-2-sub">Sacsayhuamán se erige como un testimonio monumental de la ingeniería inca. Contemple colosales estructuras de piedra talladas con precisión impecable.</p>
+                        <a href="#destinations" class="btn btn-hero" id="explore-btn-2" data-lang-key="slide-2-btn">EXPLORAR CUSCO <span class="arrow">→</span></a>
                     </div>
                 </div>
             </div>
@@ -198,9 +205,9 @@
                 <div class="slide-bg" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.9)), url('assets/pisac.png');"></div>
                 <div class="container hero-content-container">
                     <div class="hero-text-wrapper">
-                        <h1 class="hero-title">VALLE<br><span class="highlight">INCA</span></h1>
-                        <p class="hero-subtitle">Explore Písac, donde imponentes terrazas agrícolas se fusionan con el cielo, contemplando un vibrante valle artesanal a sus pies.</p>
-                        <a href="#destinations" class="btn btn-hero" id="explore-btn-3">EXPLORAR CUSCO <span class="arrow">→</span></a>
+                        <h1 class="hero-title" data-lang-key="slide-3-title">VALLE<br><span class="highlight">INCA</span></h1>
+                        <p class="hero-subtitle" data-lang-key="slide-3-sub">Explore Písac, donde imponentes terrazas agrícolas se fusionan con el cielo, contemplando un vibrante valle artesanal a sus pies.</p>
+                        <a href="#destinations" class="btn btn-hero" id="explore-btn-3" data-lang-key="slide-3-btn">EXPLORAR CUSCO <span class="arrow">→</span></a>
                     </div>
                 </div>
             </div>
@@ -209,8 +216,8 @@
                 <div class="slide-bg" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.9)), url('assets/ollantaytambo.png');"></div>
                 <div class="container hero-content-container">
                     <div class="hero-text-wrapper">
-                        <h1 class="hero-title">PUEBLO<br><span class="highlight">VIVIENTE</span></h1>
-                        <p class="hero-subtitle">Ollantaytambo permanece como un pueblo inca viviente, enclavado entre colosales fortalezas de montaña que resuenan historias de resistencia y belleza.</p>
+                        <h1 class="hero-title" data-lang-key="slide-4-title">PUEBLO<br><span class="highlight">VIVIENTE</span></h1>
+                        <p class="hero-subtitle" data-lang-key="slide-4-sub">Ollantaytambo permanece como un pueblo inca viviente, enclavado entre colosales fortalezas de montaña que resuenan historias de resistencia y belleza.</p>
                         <a href="#destinations" class="btn btn-hero" id="explore-btn-4">EXPLORAR CUSCO <span class="arrow">→</span></a>
                     </div>
                 </div>
@@ -220,9 +227,9 @@
                 <div class="slide-bg" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.9)), url('assets/rainbow_mountain.png');"></div>
                 <div class="container hero-content-container">
                     <div class="hero-text-wrapper">
-                        <h1 class="hero-title">MONTAÑA<br><span class="highlight">DE COLORES</span></h1>
-                        <p class="hero-subtitle">Ascienda a la Montaña de Colores. Maravíllese con las espectaculares franjas minerales de Vinicunca pintadas sobre el techo de los Andes.</p>
-                        <a href="#destinations" class="btn btn-hero" id="explore-btn-5">EXPLORAR CUSCO <span class="arrow">→</span></a>
+                        <h1 class="hero-title" data-lang-key="slide-5-title">MONTAÑA<br><span class="highlight">DE COLORES</span></h1>
+                        <p class="hero-subtitle" data-lang-key="slide-5-sub">Ascienda a la Montaña de Colores. Maravíllese con las espectaculares franjas minerales de Vinicunca pintadas sobre el techo de los Andes.</p>
+                        <a href="#destinations" class="btn btn-hero" id="explore-btn-5" data-lang-key="slide-5-btn">EXPLORAR CUSCO <span class="arrow">→</span></a>
                     </div>
                 </div>
             </div>
@@ -257,7 +264,7 @@
         <!-- Bottom Scroll Down indicator -->
         <a href="#destinations" class="scroll-down-btn" id="scroll-down" aria-label="Desplazarse a Recomendaciones">
             <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
-            <span class="scroll-text">DESPLÁCESE PARA DESCUBRIR</span>
+            <span class="scroll-text" data-lang-key="scroll-text">DESPLÁCESE PARA DESCUBRIR</span>
         </a>
     </section>
 
@@ -266,8 +273,8 @@
         <div class="section-coordinates destinations-coords" aria-hidden="true">ALT 3,400M / CUSCO, PE</div>
         <div class="container">
             <div class="section-header reveal-left">
-                <p class="section-tagline">Destinos seleccionados</p>
-                <h2 class="section-title">RECOMENDACIONES DE DESTINOS</h2>
+                <p class="section-tagline" data-lang-key="section-tagline-dest">Destinos seleccionados</p>
+                <h2 class="section-title" data-lang-key="section-title-dest">RECOMENDACIONES DE DESTINOS</h2>
             </div>
 
             <!-- Destinations Grid -->
@@ -278,10 +285,10 @@
                     <div class="cinemagraph-overlay"></div>
                     <div class="card-overlay"></div>
                     <div class="card-content">
-                        <span class="card-rank">1.º Lugar</span>
-                        <h3 class="card-name">Machu Picchu</h3>
-                        <p class="card-description">El legendario santuario en las nubes.</p>
-                        <span class="card-discover-btn">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
+                        <span class="card-rank" data-lang-key="card-rank-1">1.º Lugar</span>
+                        <h3 class="card-name" data-lang-key="card-name-1">Machu Picchu</h3>
+                        <p class="card-description" data-lang-key="card-desc-1">El legendario santuario en las nubes.</p>
+                        <span class="card-discover-btn" data-lang-key="card-btn-1">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
                     </div>
                 </div>
 
@@ -291,10 +298,10 @@
                     <div class="cinemagraph-overlay"></div>
                     <div class="card-overlay"></div>
                     <div class="card-content">
-                        <span class="card-rank">2.º Lugar</span>
-                        <h3 class="card-name">Sacsayhuamán</h3>
-                        <p class="card-description">Baluartes de piedra del valle de Cusco.</p>
-                        <span class="card-discover-btn">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
+                        <span class="card-rank" data-lang-key="card-rank-2">2.º Lugar</span>
+                        <h3 class="card-name" data-lang-key="card-name-2">Sacsayhuamán</h3>
+                        <p class="card-description" data-lang-key="card-desc-2">Baluartes de piedra del valle de Cusco.</p>
+                        <span class="card-discover-btn" data-lang-key="card-btn-2">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
                     </div>
                 </div>
 
@@ -304,10 +311,10 @@
                     <div class="cinemagraph-overlay"></div>
                     <div class="card-overlay"></div>
                     <div class="card-content">
-                        <span class="card-rank">3.º Lugar</span>
-                        <h3 class="card-name">Písac</h3>
-                        <p class="card-description">Sistemas de terrazas y mercados tradicionales.</p>
-                        <span class="card-discover-btn">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
+                        <span class="card-rank" data-lang-key="card-rank-3">3.º Lugar</span>
+                        <h3 class="card-name" data-lang-key="card-name-3">Písac</h3>
+                        <p class="card-description" data-lang-key="card-desc-3">Sistemas de terrazas y mercados tradicionales.</p>
+                        <span class="card-discover-btn" data-lang-key="card-btn-3">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
                     </div>
                 </div>
 
@@ -317,10 +324,10 @@
                     <div class="cinemagraph-overlay"></div>
                     <div class="card-overlay"></div>
                     <div class="card-content">
-                        <span class="card-rank">4.º Lugar</span>
-                        <h3 class="card-name">Ollantaytambo</h3>
-                        <p class="card-description">Pueblo inca viviente y fortaleza real.</p>
-                        <span class="card-discover-btn">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
+                        <span class="card-rank" data-lang-key="card-rank-4">4.º Lugar</span>
+                        <h3 class="card-name" data-lang-key="card-name-4">Ollantaytambo</h3>
+                        <p class="card-description" data-lang-key="card-desc-4">Pueblo inca viviente y fortaleza real.</p>
+                        <span class="card-discover-btn" data-lang-key="card-btn-4">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
                     </div>
                 </div>
 
@@ -330,10 +337,10 @@
                     <div class="cinemagraph-overlay"></div>
                     <div class="card-overlay"></div>
                     <div class="card-content">
-                        <span class="card-rank">5.º Lugar</span>
-                        <h3 class="card-name">Montaña de Colores</h3>
-                        <p class="card-description">Espectaculares pigmentos geológicos de Vinicunca.</p>
-                        <span class="card-discover-btn">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
+                        <span class="card-rank" data-lang-key="card-rank-5">5.º Lugar</span>
+                        <h3 class="card-name" data-lang-key="card-name-5">Montaña de Colores</h3>
+                        <p class="card-description" data-lang-key="card-desc-5">Espectaculares pigmentos geológicos de Vinicunca.</p>
+                        <span class="card-discover-btn" data-lang-key="card-btn-5">EXPLORAR EXCURSIÓN <span class="arrow">→</span></span>
                     </div>
                 </div>
             </div>
@@ -347,9 +354,9 @@
     <section class="travel-enjoy-section">
         <div class="parallax-bg" style="background-image: linear-gradient(to top, rgba(5,5,5,0.95), rgba(5,5,5,0.3)), url('assets/travel_enjoy_bg.png');"></div>
         <div class="container travel-enjoy-container reveal-scale">
-            <h2 class="enjoy-title">VIAJE Y<br>DISFRUTE SUS<br>VACACIONES</h2>
-            <p class="enjoy-text">Viva las maravillas ancestrales del Perú a través de paisajes imponentes, historia inca y aventuras inolvidables.</p>
-            <button class="btn btn-primary btn-glow" id="book-experience-btn">Reservar Experiencia</button>
+            <h2 class="enjoy-title" data-lang-key="enjoy-title">VIAJE Y<br>DISFRUTE SUS<br>VACACIONES</h2>
+            <p class="enjoy-text" data-lang-key="enjoy-text">Viva las maravillas ancestrales del Perú a través de paisajes imponentes, historia inca y aventuras inolvidables.</p>
+            <button class="btn btn-primary btn-glow" id="book-experience-btn" data-lang-key="book-exp-btn">Reservar Experiencia</button>
         </div>
     </section>
 
@@ -357,8 +364,8 @@
     <section id="tours" class="tours-section section-padding">
         <div class="container">
             <div class="section-header reveal-right text-center">
-                <p class="section-tagline">Itinerarios selectos</p>
-                <h2 class="section-title">TOURS POPULARES</h2>
+                <p class="section-tagline" data-lang-key="tours-tagline">Itinerarios selectos</p>
+                <h2 class="section-title" data-lang-key="tours-title">TOURS POPULARES</h2>
             </div>
 
             <!-- Tours Container -->
@@ -367,20 +374,20 @@
                 <div class="tour-card reveal-on-scroll">
                     <div class="tour-img-wrapper">
                         <img src="assets/machu_picchu.png" alt="Machu Picchu tour image" class="tour-img" loading="lazy" width="360" height="240">
-                        <span class="tour-tag">Favorito</span>
+                        <span class="tour-tag" data-lang-key="tour-tag-mp">Favorito</span>
                     </div>
                     <div class="tour-details">
                         <div class="tour-price-row">
-                            <h3 class="tour-name">TOUR MACHU PICCHU</h3>
+                            <h3 class="tour-name" data-lang-key="tour-name-mp">TOUR MACHU PICCHU</h3>
                             <span class="tour-price">$590</span>
                         </div>
                         <ul class="tour-features">
-                            <li><span class="bullet-dot"></span> Día Completo</li>
-                            <li><span class="bullet-dot"></span> Guía Profesional</li>
-                            <li><span class="bullet-dot"></span> Transporte Incluido</li>
-                            <li><span class="bullet-dot"></span> Experiencia del Amanecer</li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-1">Día Completo</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-2">Guía Profesional</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-3">Transporte Incluido</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-4">Experiencia del Amanecer</span></li>
                         </ul>
-                        <button class="btn btn-tour book-tour-btn" data-tour="Machu Picchu Tour" id="btn-tour-mp">Reservar Tour</button>
+                        <button class="btn btn-tour book-tour-btn" data-tour="Machu Picchu Tour" id="btn-tour-mp" data-lang-key="tour-btn-text">Reservar Tour</button>
                     </div>
                 </div>
 
@@ -391,16 +398,16 @@
                     </div>
                     <div class="tour-details">
                         <div class="tour-price-row">
-                            <h3 class="tour-name">TOUR SACSAYHUAMÁN</h3>
+                            <h3 class="tour-name" data-lang-key="tour-name-sh">TOUR SACSAYHUAMÁN</h3>
                             <span class="tour-price">$180</span>
                         </div>
                         <ul class="tour-features">
-                            <li><span class="bullet-dot"></span> Medio Día</li>
-                            <li><span class="bullet-dot"></span> Tour Histórico</li>
-                            <li><span class="bullet-dot"></span> Experiencia Cultural</li>
-                            <li><span class="bullet-dot"></span> Transporte Privado</li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-5">Medio Día</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-6">Tour Histórico</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-7">Experiencia Cultural</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-8">Transporte Privado</span></li>
                         </ul>
-                        <button class="btn btn-tour book-tour-btn" data-tour="Sacsayhuaman Tour" id="btn-tour-sh">Reservar Tour</button>
+                        <button class="btn btn-tour book-tour-btn" data-tour="Sacsayhuaman Tour" id="btn-tour-sh" data-lang-key="tour-btn-text">Reservar Tour</button>
                     </div>
                 </div>
 
@@ -411,16 +418,16 @@
                     </div>
                     <div class="tour-details">
                         <div class="tour-price-row">
-                            <h3 class="tour-name">TOUR PÍSAC</h3>
+                            <h3 class="tour-name" data-lang-key="tour-name-pisac">TOUR PÍSAC</h3>
                             <span class="tour-price">$140</span>
                         </div>
                         <ul class="tour-features">
-                            <li><span class="bullet-dot"></span> Sitio Arqueológico</li>
-                            <li><span class="bullet-dot"></span> Mercado Tradicional</li>
-                            <li><span class="bullet-dot"></span> Experiencia Guiada</li>
-                            <li><span class="bullet-dot"></span> Almuerzo Buffet</li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-9">Sitio Arqueológico</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-10">Mercado Tradicional</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-11">Experiencia Guiada</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-12">Almuerzo Buffet</span></li>
                         </ul>
-                        <button class="btn btn-tour book-tour-btn" data-tour="Pisac Tour" id="btn-tour-pisac">Reservar Tour</button>
+                        <button class="btn btn-tour book-tour-btn" data-tour="Pisac Tour" id="btn-tour-pisac" data-lang-key="tour-btn-text">Reservar Tour</button>
                     </div>
                 </div>
 
@@ -431,16 +438,16 @@
                     </div>
                     <div class="tour-details">
                         <div class="tour-price-row">
-                            <h3 class="tour-name">TOUR OLLANTAYTAMBO</h3>
+                            <h3 class="tour-name" data-lang-key="tour-name-oll">TOUR OLLANTAYTAMBO</h3>
                             <span class="tour-price">$160</span>
                         </div>
                         <ul class="tour-features">
-                            <li><span class="bullet-dot"></span> Valle Sagrado</li>
-                            <li><span class="bullet-dot"></span> Arquitectura Inca</li>
-                            <li><span class="bullet-dot"></span> Guía Profesional</li>
-                            <li><span class="bullet-dot"></span> Grupo Reducido</li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-13">Valle Sagrado</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-14">Arquitectura Inca</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-15">Guía Profesional</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-16">Grupo Reducido</span></li>
                         </ul>
-                        <button class="btn btn-tour book-tour-btn" data-tour="Ollantaytambo Tour" id="btn-tour-oll">Reservar Tour</button>
+                        <button class="btn btn-tour book-tour-btn" data-tour="Ollantaytambo Tour" id="btn-tour-oll" data-lang-key="tour-btn-text">Reservar Tour</button>
                     </div>
                 </div>
 
@@ -451,16 +458,16 @@
                     </div>
                     <div class="tour-details">
                         <div class="tour-price-row">
-                            <h3 class="tour-name">TOUR MONTAÑA DE COLORES</h3>
+                            <h3 class="tour-name" data-lang-key="tour-name-rm">TOUR MONTAÑA DE COLORES</h3>
                             <span class="tour-price">$220</span>
                         </div>
                         <ul class="tour-features">
-                            <li><span class="bullet-dot"></span> Aventura de Senderismo</li>
-                            <li><span class="bullet-dot"></span> Desayuno y Almuerzo Incluidos</li>
-                            <li><span class="bullet-dot"></span> Vistas Panorámicas</li>
-                            <li><span class="bullet-dot"></span> Kit de Oxígeno Provisto</li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-16">Aventura de Senderismo</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-17">Desayuno y Almuerzo Incluidos</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-18">Vistas Panorámicas</span></li>
+                            <li><span class="bullet-dot"></span> <span data-lang-key="tour-feat-19">Kit de Oxígeno Provisto</span></li>
                         </ul>
-                        <button class="btn btn-tour book-tour-btn" data-tour="Rainbow Mountain Tour" id="btn-tour-rm">Reservar Tour</button>
+                        <button class="btn btn-tour book-tour-btn" data-tour="Rainbow Mountain Tour" id="btn-tour-rm" data-lang-key="tour-btn-text">Reservar Tour</button>
                     </div>
                 </div>
             </div>
@@ -474,25 +481,25 @@
             <div class="stat-item reveal-on-scroll">
                 <span class="stat-number" data-target="50000" id="stat-visitors">0</span>
                 <span class="stat-plus">+</span>
-                <p class="stat-label">Visitantes Satisfechos</p>
+                <p class="stat-label" data-lang-key="stat-1-num">Visitantes Satisfechos</p>
             </div>
             <!-- Stat 2 -->
             <div class="stat-item reveal-on-scroll">
                 <span class="stat-number" data-target="500" id="stat-tours">0</span>
                 <span class="stat-plus">+</span>
-                <p class="stat-label">Tours Guiados</p>
+                <p class="stat-label" data-lang-key="stat-2-num">Tours Guiados</p>
             </div>
             <!-- Stat 3 -->
             <div class="stat-item reveal-on-scroll">
                 <span class="stat-number" data-target="15" id="stat-years">0</span>
                 <span class="stat-plus">+</span>
-                <p class="stat-label">Años de Experiencia</p>
+                <p class="stat-label" data-lang-key="stat-3-num">Años de Experiencia</p>
             </div>
             <!-- Stat 4 -->
             <div class="stat-item reveal-on-scroll">
                 <span class="stat-number" data-target="98" id="stat-satisfaction">0</span>
                 <span class="stat-plus">%</span>
-                <p class="stat-label">Tasa de Satisfacción</p>
+                <p class="stat-label" data-lang-key="stat-4-num">Tasa de Satisfacción</p>
             </div>
         </div>
     </section>
@@ -505,8 +512,8 @@
         <div class="section-coordinates timeline-coords" aria-hidden="true">RUTA DE 7 DÍAS / CUSCO, PE</div>
         <div class="container">
             <div class="section-header reveal-left">
-                <p class="section-tagline">Viaje Exclusivo</p>
-                <h2 class="section-title">CRONOGRAMA DE EXPEDICIÓN VIP DE 7 DÍAS</h2>
+                <p class="section-tagline" data-lang-key="exp-tagline">Viaje Exclusivo</p>
+                <h2 class="section-title" data-lang-key="exp-title">CRONOGRAMA DE EXPEDICIÓN VIP DE 7 DÍAS</h2>
             </div>
             
             <div class="timeline-layout reveal-on-scroll">
@@ -514,31 +521,31 @@
                 <div class="timeline-nav">
                     <button class="timeline-nav-btn active" data-day="0">
                         <span class="day-num">01</span>
-                        <span class="day-label">BIENVENIDA</span>
+                        <span class="day-label" data-lang-key="day-01">BIENVENIDA</span>
                     </button>
                     <button class="timeline-nav-btn" data-day="1">
                         <span class="day-num">02</span>
-                        <span class="day-label">VALLE SAGRADO</span>
+                        <span class="day-label" data-lang-key="day-02">VALLE SAGRADO</span>
                     </button>
                     <button class="timeline-nav-btn" data-day="2">
                         <span class="day-num">03</span>
-                        <span class="day-label">FORTALEZA</span>
+                        <span class="day-label" data-lang-key="day-03">FORTALEZA</span>
                     </button>
                     <button class="timeline-nav-btn" data-day="3">
                         <span class="day-num">04</span>
-                        <span class="day-label">PUEBLO VIVO</span>
+                        <span class="day-label" data-lang-key="day-04">PUEBLO VIVO</span>
                     </button>
                     <button class="timeline-nav-btn" data-day="4">
                         <span class="day-num">05</span>
-                        <span class="day-label">MACHU PICCHU</span>
+                        <span class="day-label" data-lang-key="day-05">MACHU PICCHU</span>
                     </button>
                     <button class="timeline-nav-btn" data-day="5">
                         <span class="day-num">06</span>
-                        <span class="day-label">MONTAÑA DE COLORES</span>
+                        <span class="day-label" data-lang-key="day-06">MONTAÑA DE COLORES</span>
                     </button>
                     <button class="timeline-nav-btn" data-day="6">
                         <span class="day-num">07</span>
-                        <span class="day-label">DESPEDIDA</span>
+                        <span class="day-label" data-lang-key="day-07">DESPEDIDA</span>
                     </button>
                 </div>
                 
@@ -577,8 +584,8 @@
     <section id="gallery" class="gallery-section section-padding">
         <div class="container">
             <div class="section-header reveal-right">
-                <p class="section-tagline">Viaje Visual</p>
-                <h2 class="section-title">GALERÍA PREMIUM</h2>
+                <p class="section-tagline" data-lang-key="gallery-tagline">Viaje Visual</p>
+                <h2 class="section-title" data-lang-key="gallery-title">GALERÍA PREMIUM</h2>
             </div>
 
             <!-- Masonry Grid -->
@@ -660,10 +667,10 @@
                         <div class="testimonial-img-wrapper">
                             <img src="assets/avatar_visitor1.png" alt="Visitor 1 portrait" class="testimonial-avatar" loading="lazy" width="90" height="90">
                         </div>
-                        <p class="testimonial-text">"Uno de los viajes más increíbles de mi vida. Los detalles, los paisajes y los guías privados fueron de primera clase mundial. Cusco Travel nos hizo sentir como de la realeza mientras explorábamos Machu Picchu."</p>
+                        <p class="testimonial-text" data-lang-key="testimonial-1-text">"Uno de los viajes más increíbles de mi vida. Los detalles, los paisajes y los guías privados fueron de primera clase mundial. Cusco Travel nos hizo sentir como de la realeza mientras explorábamos Machu Picchu."</p>
                         <div class="testimonial-rating">★★★★★</div>
-                        <h4 class="testimonial-author">David Harrison</h4>
-                        <span class="testimonial-country">Reino Unido</span>
+                        <h4 class="testimonial-author" data-lang-key="testimonial-author-1">David Harrison</h4>
+                        <span class="testimonial-country" data-lang-key="testimonial-country-1">Reino Unido</span>
                         <div class="testimonial-timer-bar"><div class="testimonial-timer-progress" id="t-progress-1"></div></div>
                     </div>
                 </div>
@@ -674,10 +681,10 @@
                         <div class="testimonial-img-wrapper">
                             <img src="assets/avatar_visitor2.png" alt="Visitor 2 portrait" class="testimonial-avatar" loading="lazy" width="90" height="90">
                         </div>
-                        <p class="testimonial-text">"Todo fue perfecto. Los traslados privados, las explicaciones arqueológicas locales y las vistas impresionantes. ¡Recorrer Ollantaytambo con su guía experto fue inolvidable!"</p>
+                        <p class="testimonial-text" data-lang-key="testimonial-2-text">"Todo fue perfecto. Los traslados privados, las explicaciones arqueológicas locales y las vistas impresionantes. ¡Recorrer Ollantaytambo con su guía experto fue inolvidable!"</p>
                         <div class="testimonial-rating">★★★★★</div>
-                        <h4 class="testimonial-author">Sophia Martinez</h4>
-                        <span class="testimonial-country">Estados Unidos</span>
+                        <h4 class="testimonial-author" data-lang-key="testimonial-author-2">Sophia Martinez</h4>
+                        <span class="testimonial-country" data-lang-key="testimonial-country-2">Estados Unidos</span>
                         <div class="testimonial-timer-bar"><div class="testimonial-timer-progress" id="t-progress-2"></div></div>
                     </div>
                 </div>
@@ -699,8 +706,8 @@
         <div class="section-coordinates map-coords" aria-hidden="true">COORD 13°15'S / 72°15'W</div>
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <p class="section-tagline">Viaje Interactivo</p>
-                <h2 class="section-title">MAPA DE EXPEDICIÓN DEL VALLE SAGRADO</h2>
+                <p class="section-tagline" data-lang-key="map-tagline">Viaje Interactivo</p>
+                <h2 class="section-title" data-lang-key="map-title">MAPA DE EXPEDICIÓN DEL VALLE SAGRADO</h2>
             </div>
             
             <div class="map-layout reveal-scale">
@@ -855,25 +862,25 @@
 
                 <div class="map-info-panel glass-card">
                     <div class="map-info-content" id="map-info-content">
-                        <span class="info-tagline">Lugar Destacado</span>
+                        <span class="info-tagline" data-lang-key="map-info-tag">Lugar Destacado</span>
                         <h3 class="info-title" id="map-landmark-name">Cusco, Capital Imperial</h3>
                         <ul class="info-list">
                             <li>
-                                <span class="info-label">
+                                <span class="info-label" data-lang-key="map-alt-label">
                                     <svg class="info-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 5.69l5 8.34L12 12l-5 2.03 5-8.34M12 2L2 22h20L12 2z"/></svg>
                                     Altitud:
                                 </span>
                                 <span id="map-altitude">3,400 metros (11,150 pies)</span>
                             </li>
                             <li>
-                                <span class="info-label">
+                                <span class="info-label" data-lang-key="map-time-label">
                                     <svg class="info-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8s-3.58 8-8 8zm.5-13H11v6l5.25 3.15l.75-1.23l-4.5-2.67z"/></svg>
                                     Tiempo de Viaje:
                                 </span>
                                 <span id="map-time">Capital Inca y Centro Principal</span>
                             </li>
                             <li>
-                                <span class="info-label">
+                                <span class="info-label" data-lang-key="map-exc-label">
                                     <svg class="info-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5z"/></svg>
                                     Excursión:
                                 </span>
@@ -881,7 +888,7 @@
                             </li>
                         </ul>
                         <p class="info-desc" id="map-description">Cusco es la ciudad habitada continuamente más antigua de América. Camine por calles empedradas edificadas sobre impecables cimientos incas combinados con arquitectura colonial. Recomendamos descansar aquí al inicio para aclimatarse.</p>
-                        <a href="#tours" class="btn btn-primary btn-glow btn-tour-link" style="margin-top: 20px;" id="map-tour-btn">Ver Excursión</a>
+                        <a href="#tours" class="btn btn-primary btn-glow btn-tour-link" style="margin-top: 20px;" id="map-tour-btn" data-lang-key="map-tour-btn">Ver Excursión</a>
                     </div>
                 </div>
             </div>
@@ -893,11 +900,11 @@
         <div class="section-coordinates stargazing-coords" aria-hidden="true">ALT 4,200M / CIELO DE CUSCO</div>
         <div class="container">
             <div class="section-header reveal-on-scroll text-center">
-                <p class="section-tagline">Cosmología Andina Celestial</p>
-                <h2 class="section-title">CIELO INTERACTIVO DE OBSERVACIÓN DE ESTRELLAS INCA</h2>
+                <p class="section-tagline" data-lang-key="star-tagline">Cosmología Andina Celestial</p>
+                <h2 class="section-title" data-lang-key="star-title">CIELO INTERACTIVO DE OBSERVACIÓN DE ESTRELLAS INCA</h2>
             </div>
             
-            <p class="stargazing-intro reveal-on-scroll text-center">
+            <p class="stargazing-intro reveal-on-scroll text-center" data-lang-key="star-intro">
                 Los Incas observaban el cielo nocturno de Cusco no solo como estrellas individuales, sino como estructuras cósmicas profundas. Pase el cursor (o toque en el móvil) sobre las constelaciones brillantes para trazar sus formas y descubrir sus leyendas.
             </p>
             
@@ -908,7 +915,7 @@
                     
                     <!-- Floating coordinates tracker visual detail -->
                     <div class="star-tracking-visor">
-                        <span class="visor-crosshair-label">VISOR ACTIVO</span>
+                        <span class="visor-crosshair-label" data-lang-key="visor-label">VISOR ACTIVO</span>
                         <span class="visor-coordinates" id="star-visor-coords">RA 12h 45m / DEC -63°</span>
                     </div>
                 </div>
@@ -948,7 +955,7 @@
         <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
-        <span class="whatsapp-tooltip">Chatear con Concierge</span>
+        <span class="whatsapp-tooltip" data-lang-key="wa-tooltip">Chatear con Concierge</span>
     </a>
 
     <!-- FOOTER -->
@@ -957,7 +964,7 @@
             <!-- Col 1 -->
             <div class="footer-col reveal-on-scroll">
                 <h3 class="footer-logo"><span class="logo-dot"></span>CUSCO TRAVEL</h3>
-                <p class="footer-desc">Experiencias de lujo a través del corazón del Imperio Inca. Ofrecemos tours privados a medida, historiadores expertos locales y alojamientos de ultra-lujo.</p>
+                <p class="footer-desc" data-lang-key="footer-desc">Experiencias de lujo a través del corazón del Imperio Inca. Ofrecemos tours privados a medida, historiadores expertos locales y alojamientos de ultra-lujo.</p>
                 <div class="footer-socials">
                     <!-- FB -->
                     <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook" id="fb-link">
@@ -976,7 +983,7 @@
 
             <!-- Col 2 -->
             <div class="footer-col reveal-on-scroll">
-                <h4 class="footer-title">Enlaces Rápidos</h4>
+                <h4 class="footer-title" data-lang-key="footer-title-links">Enlaces Rápidos</h4>
                 <ul class="footer-links">
                     <li><a href="#home" id="foot-home">Inicio</a></li>
                     <li><a href="#destinations" id="foot-destinations">Destinos</a></li>
@@ -988,7 +995,7 @@
 
             <!-- Col 3 -->
             <div class="footer-col reveal-on-scroll">
-                <h4 class="footer-title">Contáctenos</h4>
+                <h4 class="footer-title" data-lang-key="footer-title-contact">Contáctenos</h4>
                 <ul class="footer-contact">
                     <li>
                         <span class="icon">📍</span>
@@ -1008,8 +1015,8 @@
 
         <div class="footer-bottom">
             <div class="container footer-bottom-flex">
-                <p>&copy; 2026 Cusco Travel. Todos los derechos reservados.</p>
-                <p>Diseñado para Exploradores de Lujo.</p>
+                <p data-lang-key="footer-copyright">&copy; 2026 Cusco Travel. Todos los derechos reservados.</p>
+                <p data-lang-key="footer-tagline">Diseñado para Exploradores de Lujo.</p>
             </div>
         </div>
     </footer>
@@ -1038,8 +1045,8 @@
                 
                 <div class="planner-step active" data-step="1">
                     <span class="step-num">01 / 04</span>
-                    <h3>Seleccione su estilo de viaje</h3>
-                    <p class="step-desc">Personalizando su experiencia de acuerdo a sus deseos personales.</p>
+                    <h3 data-lang-key="step-1-title">Seleccione su estilo de viaje</h3>
+                    <p class="step-desc" data-lang-key="step-1-desc">Personalizando su experiencia de acuerdo a sus deseos personales.</p>
                     <div class="planner-options">
                         <label class="planner-opt-card" id="opt-style-1">
                             <input type="radio" name="travel-style" value="Arqueología e Historia" checked>
@@ -1064,8 +1071,8 @@
 
                 <div class="planner-step" data-step="2">
                     <span class="step-num">02 / 04</span>
-                    <h3>Duración y Huéspedes</h3>
-                    <p class="step-desc">¿Cuánto tiempo y con quién va a explorar?</p>
+                    <h3 data-lang-key="step-2-title">Duración y Huéspedes</h3>
+                    <p class="step-desc" data-lang-key="step-2-desc">¿Cuánto tiempo y con quién va a explorar?</p>
                     <div class="planner-inputs">
                         <div class="input-group">
                             <label for="planner-duration">Duración (Días)</label>
@@ -1092,8 +1099,8 @@
 
                 <div class="planner-step" data-step="3">
                     <span class="step-num">03 / 04</span>
-                    <h3>Alojamiento Preferido</h3>
-                    <p class="step-desc">Seleccione dónde desea descansar después de sus excursiones.</p>
+                    <h3 data-lang-key="step-3-title">Alojamiento Preferido</h3>
+                    <p class="step-desc" data-lang-key="step-3-desc">Seleccione dónde desea descansar después de sus excursiones.</p>
                     <div class="planner-options">
                         <label class="planner-opt-card" id="opt-hotel-1">
                             <input type="radio" name="lodging" value="Hotel Boutique de 5 Estrellas" checked>
@@ -1114,8 +1121,8 @@
 
                 <div class="planner-step" data-step="4">
                     <span class="step-num">04 / 04</span>
-                    <h3>Solicitar Itinerario</h3>
-                    <p class="step-desc">Ingrese sus datos para generar su borrador de itinerario personalizado.</p>
+                    <h3 data-lang-key="step-4-title">Solicitar Itinerario</h3>
+                    <p class="step-desc" data-lang-key="step-4-desc">Ingrese sus datos para generar su borrador de itinerario personalizado.</p>
                     <div class="planner-inputs">
                         <div class="input-group">
                             <label for="planner-name">Nombre Completo</label>
@@ -1151,9 +1158,9 @@
         <div class="glass-card booking-modal-content">
             <button class="booking-close" id="booking-close" aria-label="Cerrar Modal">&times;</button>
             <div class="booking-success-icon">✓</div>
-            <h3>Experiencia de Lujo Solicitada</h3>
-            <p>Gracias por elegir Cusco Travel. Nuestro concierge de viajes privado se comunicará con usted a la brevedad para personalizar su itinerario de lujo.</p>
-            <button class="btn btn-primary btn-glow" id="booking-ok-btn">Confirmar</button>
+            <h3 data-lang-key="booking-title">Experiencia de Lujo Solicitada</h3>
+            <p data-lang-key="booking-text">Gracias por elegir Cusco Travel. Nuestro concierge de viajes privado se comunicará con usted a la brevedad para personalizar su itinerario de lujo.</p>
+            <button class="btn btn-primary btn-glow" id="booking-ok-btn" data-lang-key="booking-ok">Confirmar</button>
         </div>
     </div>
 
@@ -1161,8 +1168,8 @@
 
     <!-- COOKIE CONSENT BANNER -->
     <div id="cookie-banner" class="cookie-banner">
-        <p class="cookie-text">Utilizamos cookies propias y de terceros para mejorar su experiencia. Al continuar navegando, acepta nuestra <a href="#contact" class="cookie-link">política de privacidad</a>.</p>
-        <button class="btn btn-cookie" id="cookie-accept">Aceptar</button>
+        <p class="cookie-text" data-lang-key="cookie-text">Utilizamos cookies propias y de terceros para mejorar su experiencia. Al continuar navegando, acepta nuestra <a href="#contact" class="cookie-link">política de privacidad</a>.</p>
+        <button class="btn btn-cookie" id="cookie-accept" data-lang-key="cookie-btn">Aceptar</button>
     </div>
 
     <!-- Theme Reveal Overlay (for light/dark transition) -->

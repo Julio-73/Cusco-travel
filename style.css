@@ -2430,6 +2430,77 @@ body.light-theme .lightbox-caption {
     opacity: 1;
 }
 
+/* --- Language Toggle Button --- */
+.lang-toggle-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 4px 10px;
+    cursor: pointer;
+    z-index: 1010;
+    margin-left: 12px;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    flex-shrink: 0;
+    height: 28px;
+}
+.lang-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.08);
+}
+.lang-toggle-btn:active {
+    transform: scale(0.94);
+}
+.lang-current {
+    color: var(--text-pure);
+    transition: color 0.3s ease;
+}
+.lang-divider {
+    color: rgba(255, 255, 255, 0.15);
+    font-weight: 300;
+}
+.lang-alt {
+    color: rgba(255, 255, 255, 0.35);
+    transition: color 0.3s ease;
+}
+.lang-toggle-btn.en-mode .lang-current {
+    color: rgba(255, 255, 255, 0.35);
+}
+.lang-toggle-btn.en-mode .lang-alt {
+    color: var(--text-pure);
+}
+
+body.light-theme .lang-toggle-btn {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+body.light-theme .lang-toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+body.light-theme .lang-current {
+    color: #1a1a1a;
+}
+body.light-theme .lang-alt {
+    color: rgba(0, 0, 0, 0.3);
+}
+body.light-theme .lang-toggle-btn.en-mode .lang-current {
+    color: rgba(0, 0, 0, 0.3);
+}
+body.light-theme .lang-toggle-btn.en-mode .lang-alt {
+    color: #1a1a1a;
+}
+
 .theme-toggle-btn {
     position: relative;
     width: 56px;
