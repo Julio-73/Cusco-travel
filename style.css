@@ -11,7 +11,7 @@
     --text-pure: #FFFFFF;
     --text-muted: #A0A0A0;
     --text-dark: #666666;
-    --font-heading: 'Montserrat', sans-serif;
+    --font-heading: 'Playfair Display', 'Montserrat', sans-serif;
     --font-body: 'Poppins', sans-serif;
     --font-mono: 'Courier New', monospace;
     --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
@@ -125,9 +125,12 @@ body {
 /* --- Typography Utilities --- */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+h3, h4, h5, h6 {
     text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: -2px;
+    letter-spacing: 1px;
 }
 
 p {
@@ -174,7 +177,9 @@ a {
 .section-title {
     font-size: clamp(2rem, 4vw, 3.2rem);
     line-height: 1.1;
-    font-weight: 900;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* ==========================================================================
@@ -449,7 +454,7 @@ a {
 .mobile-nav-link {
     font-family: var(--font-heading);
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-pure);
     text-transform: uppercase;
     display: inline-block;
@@ -657,8 +662,9 @@ a {
 .hero-title {
     font-size: clamp(3.5rem, 8vw, 7.5rem);
     line-height: 0.9;
-    font-weight: 900;
-    letter-spacing: -3px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
     margin-bottom: 24px;
 }
 
@@ -694,7 +700,7 @@ a {
 .indicator-num {
     font-family: var(--font-heading);
     font-size: 0.9rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-pure);
 }
 .indicator-line {
@@ -894,14 +900,14 @@ a {
 .card-discover-btn {
     font-family: var(--font-heading);
     font-size: 0.65rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 2px;
     color: var(--accent);
     display: inline-flex;
     align-items: center;
     gap: 6px;
     margin-top: 15px;
-    border-bottom: 1px solid rgba(255, 45, 45, 0.25);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.25);
     padding-bottom: 3px;
     opacity: 0;
     transform: translateY(25px);
@@ -960,6 +966,8 @@ a {
 .enjoy-title {
     font-size: clamp(2.5rem, 6vw, 5.5rem);
     line-height: 0.95;
+    font-weight: 700;
+    text-transform: uppercase;
     margin-bottom: 30px;
     text-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
@@ -1034,17 +1042,15 @@ a {
 }
 .tour-name {
     font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
+    font-weight: 700;
     color: var(--text-pure);
 }
 .tour-price {
     font-family: var(--font-heading);
     font-size: 1.4rem;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--accent);
     text-shadow: 0 0 10px rgba(var(--accent-rgb), 0.3);
-    letter-spacing: -0.5px;
 }
 
 .tour-features {
@@ -1119,8 +1125,8 @@ a {
 .stat-number {
     font-family: var(--font-heading);
     font-size: clamp(3rem, 5vw, 4.8rem);
-    font-weight: 900;
-    letter-spacing: -2px;
+    font-weight: 700;
+    letter-spacing: -1px;
     color: var(--text-pure);
     line-height: 1;
 }
@@ -1129,7 +1135,7 @@ a {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 3.5vw, 3.2rem);
     color: var(--accent);
-    font-weight: 900;
+    font-weight: 700;
     margin-left: -5px;
 }
 
@@ -2821,7 +2827,7 @@ body.light-theme .scale-text {
 }
 
 .map-node:hover .node-crosshair {
-    stroke: rgba(255, 45, 45, 0.4) !important;
+    stroke: rgba(var(--accent-rgb), 0.4) !important;
     stroke-width: 1px;
 }
 
@@ -2914,7 +2920,7 @@ body.light-theme .map-node:hover .node-center {
 
 .badge-bg.active {
     stroke: var(--accent);
-    fill: rgba(255, 45, 45, 0.15);
+    fill: rgba(var(--accent-rgb), 0.15);
     stroke-width: 1.2px;
 }
 
@@ -2933,7 +2939,7 @@ body.light-theme .map-node:hover .node-center {
 
 .map-node:hover .badge-bg {
     stroke: var(--accent);
-    fill: rgba(255, 45, 45, 0.12);
+    fill: rgba(var(--accent-rgb), 0.12);
     stroke-width: 1.2px;
 }
 
@@ -2948,7 +2954,7 @@ body.light-theme .badge-bg {
 
 body.light-theme .badge-bg.active {
     stroke: var(--accent);
-    fill: rgba(255, 45, 45, 0.06);
+    fill: rgba(var(--accent-rgb), 0.06);
 }
 
 body.light-theme .badge-text {
@@ -2956,7 +2962,7 @@ body.light-theme .badge-text {
 }
 
 body.light-theme .map-node:hover .badge-bg {
-    fill: rgba(255, 45, 45, 0.05);
+    fill: rgba(var(--accent-rgb), 0.05);
 }
 
 body.light-theme .map-node:hover .badge-text {
@@ -3023,13 +3029,13 @@ body.light-theme .route-segment.active {
 }
 
 .map-info-panel.pulse-glow {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 45, 45, 0.15);
-    border-color: rgba(255, 45, 45, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 15px rgba(var(--accent-rgb), 0.15);
+    border-color: rgba(var(--accent-rgb), 0.2);
 }
 
 body.light-theme .map-info-panel.pulse-glow {
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05), 0 0 15px rgba(255, 45, 45, 0.08);
-    border-color: rgba(255, 45, 45, 0.15);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05), 0 0 15px rgba(var(--accent-rgb), 0.08);
+    border-color: rgba(var(--accent-rgb), 0.15);
 }
 
 .map-info-content {
@@ -3303,7 +3309,7 @@ body.light-theme .testimonial-timer-bar {
 }
 
 .destination-card:hover, .tour-card:hover {
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.65), 0 0 15px rgba(255, 45, 45, 0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.65), 0 0 15px rgba(var(--accent-rgb), 0.15);
     z-index: 15;
 }
 
@@ -3393,7 +3399,7 @@ body.light-theme .testimonial-timer-bar {
 
 .timeline-nav-btn .day-num {
     font-size: 1.25rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
@@ -3469,7 +3475,7 @@ body.light-theme .testimonial-timer-bar {
     color: var(--accent);
     font-family: var(--font-heading);
     font-size: 0.85rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 3px;
     margin-bottom: 8px;
 }
@@ -3485,10 +3491,9 @@ body.light-theme .testimonial-timer-bar {
 
 .timeline-card-title {
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.2;
     color: var(--text-pure);
-    letter-spacing: -0.5px;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -3510,7 +3515,7 @@ body.light-theme .testimonial-timer-bar {
 .highlight-tag-title {
     font-family: var(--font-heading);
     font-size: 0.7rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 2px;
     color: var(--text-muted);
     display: block;
@@ -3654,7 +3659,7 @@ body.light-theme .testimonial-timer-bar {
 .visor-crosshair-label {
     font-family: var(--font-heading);
     font-size: 0.6rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 2px;
     color: var(--accent);
     display: flex;
@@ -3707,7 +3712,7 @@ body.light-theme .testimonial-timer-bar {
     color: var(--accent);
     font-family: var(--font-heading);
     font-size: 0.75rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
     display: block;
@@ -3716,8 +3721,7 @@ body.light-theme .testimonial-timer-bar {
 
 .constellation-title {
     font-size: 1.8rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
+    font-weight: 700;
     margin-bottom: 20px;
     color: var(--text-pure);
     text-transform: uppercase;
@@ -3748,7 +3752,7 @@ body.light-theme .testimonial-timer-bar {
 .constellation-detail-item .detail-label {
     font-family: var(--font-heading);
     font-size: 0.65rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 1.5px;
     color: var(--accent);
     text-transform: uppercase;
