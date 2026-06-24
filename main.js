@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Allow the sliding curtain panels to slide out of view, then trigger scroll reveals
             setTimeout(() => {
                 triggerScrollReveal();
-            }, 1000);
+            }, 600);
         } else {
             triggerScrollReveal();
         }
@@ -403,8 +403,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function triggerScrollReveal() {
         const observerOptions = {
             root: null,
-            threshold: 0.15,
-            rootMargin: '0px'
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
         };
 
         const observer = new IntersectionObserver((entries, observer) => {

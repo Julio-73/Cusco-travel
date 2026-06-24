@@ -198,10 +198,12 @@ a {
     background: transparent;
     pointer-events: auto;
     visibility: visible;
-    transition: visibility 1.2s;
+    opacity: 1;
+    transition: opacity 0.8s ease 1s, visibility 0s linear 1.8s;
 }
 
 .preloader.fade-out {
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
@@ -1185,6 +1187,24 @@ a {
     cursor: pointer;
     background: #000;
 }
+
+.gallery-item.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(60px) scale(0.92);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gallery-item.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.gallery-item:nth-child(2) { transition-delay: 0.1s; }
+.gallery-item:nth-child(3) { transition-delay: 0.2s; }
+.gallery-item:nth-child(4) { transition-delay: 0.15s; }
+.gallery-item:nth-child(5) { transition-delay: 0.25s; }
+.gallery-item:nth-child(6) { transition-delay: 0.2s; }
+.gallery-item:nth-child(7) { transition-delay: 0.3s; }
+.gallery-item:nth-child(8) { transition-delay: 0.25s; }
 
 .gallery-item img {
     width: 100%;
@@ -2396,19 +2416,24 @@ body.light-theme .lightbox-caption {
     right: 30px;
     width: 56px;
     height: 56px;
-    background: #25D366;
+    background: rgba(5, 5, 5, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(212, 175, 55, 0.25);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 999;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, background 0.4s ease, border-color 0.4s ease;
     text-decoration: none;
 }
 .whatsapp-float:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+    background: rgba(37, 211, 102, 0.85);
+    border-color: rgba(37, 211, 102, 0.5);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.3);
 }
 .whatsapp-tooltip {
     position: absolute;
