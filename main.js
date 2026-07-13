@@ -14,201 +14,233 @@ let currentLang = localStorage.getItem('cusco-lang') || 'es';
 
 const translations = {
     // Nav
-    'nav-home': { es: 'Inicio', en: 'Home' },
-    'nav-destinations': { es: 'Destinos', en: 'Destinations' },
-    'nav-tours': { es: 'Tours', en: 'Tours' },
-    'nav-experiences': { es: 'Experiencias', en: 'Experiences' },
-    'nav-gallery': { es: 'Galería', en: 'Gallery' },
-    'nav-contact': { es: 'Contacto', en: 'Contact' },
-    'mob-home': { es: 'Inicio', en: 'Home' },
-    'mob-destinations': { es: 'Destinos', en: 'Destinations' },
-    'mob-tours': { es: 'Tours', en: 'Tours' },
-    'mob-experiences': { es: 'Experiencias', en: 'Experiences' },
-    'mob-gallery': { es: 'Galería', en: 'Gallery' },
-    'mob-contact': { es: 'Contacto', en: 'Contact' },
-    'foot-home': { es: 'Inicio', en: 'Home' },
-    'foot-destinations': { es: 'Destinos', en: 'Destinations' },
-    'foot-tours': { es: 'Tours', en: 'Tours' },
-    'foot-gallery': { es: 'Galería', en: 'Gallery' },
-    'foot-contact': { es: 'Contacto', en: 'Contact' },
+    'nav-home': { es: 'Inicio', en: 'Home', pt: 'Início' },
+    'nav-destinations': { es: 'Destinos', en: 'Destinations', pt: 'Destinos' },
+    'nav-tours': { es: 'Tours', en: 'Tours', pt: 'Passeios' },
+    'nav-experiences': { es: 'Experiencias', en: 'Experiences', pt: 'Experiências' },
+    'nav-gallery': { es: 'Galería', en: 'Gallery', pt: 'Galeria' },
+    'nav-contact': { es: 'Contacto', en: 'Contact', pt: 'Contato' },
+    'mob-home': { es: 'Inicio', en: 'Home', pt: 'Início' },
+    'mob-destinations': { es: 'Destinos', en: 'Destinations', pt: 'Destinos' },
+    'mob-tours': { es: 'Tours', en: 'Tours', pt: 'Passeios' },
+    'mob-experiences': { es: 'Experiencias', en: 'Experiences', pt: 'Experiências' },
+    'mob-gallery': { es: 'Galería', en: 'Gallery', pt: 'Galeria' },
+    'mob-contact': { es: 'Contacto', en: 'Contact', pt: 'Contato' },
+    'foot-home': { es: 'Inicio', en: 'Home', pt: 'Início' },
+    'foot-destinations': { es: 'Destinos', en: 'Destinations', pt: 'Destinos' },
+    'foot-tours': { es: 'Tours', en: 'Tours', pt: 'Passeios' },
+    'foot-gallery': { es: 'Galería', en: 'Gallery', pt: 'Galeria' },
+    'foot-contact': { es: 'Contacto', en: 'Contact', pt: 'Contato' },
     
     // Preloader
-    'preloader-title': { es: 'CUSCO TRAVEL', en: 'CUSCO TRAVEL' },
-    'preloader-text': { es: 'Preparando su experiencia de lujo...', en: 'Preparing your luxury experience...' },
+    'preloader-title': { es: 'CUSCO TRAVEL', en: 'CUSCO TRAVEL', pt: 'CUSCO TRAVEL' },
+    'preloader-text': { es: 'Preparando su experiencia de lujo...', en: 'Preparing your luxury experience...', pt: 'Preparando sua experiência de luxo...' },
     
     // Hero slides
-    'slide-1-title': { es: 'VISITE<br><span class="highlight">CUSCO</span>', en: 'DISCOVER<br><span class="highlight">CUSCO</span>' },
-    'slide-1-sub': { es: 'Descubra la mágica capital del Imperio Inca. Historia milenaria, paisajes imponentes y experiencias de lujo inolvidables le esperan.', en: 'Discover the magical capital of the Inca Empire. Millenary history, imposing landscapes and unforgettable luxury experiences await you.' },
-    'slide-1-btn': { es: 'EXPLORAR CUSCO <span class="arrow">→</span>', en: 'EXPLORE CUSCO <span class="arrow">→</span>' },
-    'slide-2-title': { es: 'PIEDRAS<br><span class="highlight">SAGRADAS</span>', en: 'SACRED<br><span class="highlight">STONES</span>' },
-    'slide-2-sub': { es: 'Sacsayhuamán se erige como un testimonio monumental de la ingeniería inca. Contemple colosales estructuras de piedra talladas con precisión impecable.', en: 'Sacsayhuamán stands as a monumental testament to Inca engineering. Behold colossal stone structures carved with impeccable precision.' },
-    'slide-2-btn': { es: 'EXPLORAR CUSCO <span class="arrow">→</span>', en: 'EXPLORE CUSCO <span class="arrow">→</span>' },
-    'slide-3-title': { es: 'VALLE<br><span class="highlight">INCA</span>', en: 'INCA<br><span class="highlight">VALLEY</span>' },
-    'slide-3-sub': { es: 'Explore Písac, donde imponentes terrazas agrícolas se fusionan con el cielo, contemplando un vibrante valle artesanal a sus pies.', en: 'Explore Pisac, where imposing agricultural terraces merge with the sky, overlooking a vibrant artisan valley at your feet.' },
-    'slide-3-btn': { es: 'EXPLORAR CUSCO <span class="arrow">→</span>', en: 'EXPLORE CUSCO <span class="arrow">→</span>' },
-    'slide-4-title': { es: 'PUEBLO<br><span class="highlight">VIVIENTE</span>', en: 'LIVING<br><span class="highlight">VILLAGE</span>' },
-    'slide-4-sub': { es: 'Ollantaytambo permanece como un pueblo inca viviente, enclavado entre colosales fortalezas de montaña que resuenan historias de resistencia y belleza.', en: 'Ollantaytambo remains a living Inca village, nestled between colossal mountain fortresses that echo stories of resistance and beauty.' },
-    'slide-5-title': { es: 'MONTAÑA<br><span class="highlight">DE COLORES</span>', en: 'RAINBOW<br><span class="highlight">MOUNTAIN</span>' },
-    'slide-5-sub': { es: 'Ascienda a la Montaña de Colores. Maravíllese con las espectaculares franjas minerales de Vinicunca pintadas sobre el techo de los Andes.', en: 'Ascend to the Rainbow Mountain. Marvel at the spectacular mineral stripes of Vinicunca painted on the roof of the Andes.' },
-    'scroll-text': { es: 'DESPLÁCESE PARA DESCUBRIR', en: 'SCROLL TO DISCOVER' },
+    'slide-1-title': { es: 'VISITE<br><span class="highlight">CUSCO</span>', en: 'DISCOVER<br><span class="highlight">CUSCO</span>', pt: 'DESCUBRA<br><span class="highlight">CUSCO</span>' },
+    'slide-1-sub': { es: 'Descubra la mágica capital del Imperio Inca. Historia milenaria, paisajes imponentes y experiencias de lujo inolvidables le esperan.', en: 'Discover the magical capital of the Inca Empire. Millenary history, imposing landscapes and unforgettable luxury experiences await you.', pt: 'Descubra a mágica capital do Império Inca. História milenar, paisagens imponentes e experiências de luxo inesquecíveis esperam por você.' },
+    'slide-1-btn': { es: 'EXPLORAR CUSCO <span class="arrow">→</span>', en: 'EXPLORE CUSCO <span class="arrow">→</span>', pt: 'EXPLORAR CUSCO <span class="arrow">→</span>' },
+    'slide-2-title': { es: 'PIEDRAS<br><span class="highlight">SAGRADAS</span>', en: 'SACRED<br><span class="highlight">STONES</span>', pt: 'PEDRAS<br><span class="highlight">SAGRADAS</span>' },
+    'slide-2-sub': { es: 'Sacsayhuamán se erige como un testimonio monumental de la ingeniería inca. Contemple colosales estructuras de piedra talladas con precisión impecable.', en: 'Sacsayhuamán stands as a monumental testament to Inca engineering. Behold colossal stone structures carved with impeccable precision.', pt: 'Sacsayhuamán se ergue como um testemunho monumental da engenharia inca. Contemple estruturas colossais de pedra esculpidas com precisão impecável.' },
+    'slide-2-btn': { es: 'EXPLORAR CUSCO <span class="arrow">→</span>', en: 'EXPLORE CUSCO <span class="arrow">→</span>', pt: 'EXPLORAR CUSCO <span class="arrow">→</span>' },
+    'slide-3-title': { es: 'VALLE<br><span class="highlight">INCA</span>', en: 'INCA<br><span class="highlight">VALLEY</span>', pt: 'VALE<br><span class="highlight">INCA</span>' },
+    'slide-3-sub': { es: 'Explore Písac, donde imponentes terrazas agrícolas se fusionan con el cielo, contemplando un vibrante valle artesanal a sus pies.', en: 'Explore Pisac, where imposing agricultural terraces merge with the sky, overlooking a vibrant artisan valley at your feet.', pt: 'Explore Písac, onde imponentes terraços agrícolas se fundem com o céu, contemplando um vibrante vale artesanal a seus pés.' },
+    'slide-3-btn': { es: 'EXPLORAR CUSCO <span class="arrow">→</span>', en: 'EXPLORE CUSCO <span class="arrow">→</span>', pt: 'EXPLORAR CUSCO <span class="arrow">→</span>' },
+    'slide-4-title': { es: 'PUEBLO<br><span class="highlight">VIVIENTE</span>', en: 'LIVING<br><span class="highlight">VILLAGE</span>', pt: 'VILA<br><span class="highlight">VIVA</span>' },
+    'slide-4-sub': { es: 'Ollantaytambo permanece como un pueblo inca viviente, enclavado entre colosales fortalezas de montaña que resuenan historias de resistencia y belleza.', en: 'Ollantaytambo remains a living Inca village, nestled between colossal mountain fortresses that echo stories of resistance and beauty.', pt: 'Ollantaytambo permanece como uma vila inca viva, aninhada entre colossais fortalezas de montanha que ecoam histórias de resistência e beleza.' },
+    'slide-5-title': { es: 'MONTAÑA<br><span class="highlight">DE COLORES</span>', en: 'RAINBOW<br><span class="highlight">MOUNTAIN</span>', pt: 'MONTANHA<br><span class="highlight">COLORIDA</span>' },
+    'slide-5-sub': { es: 'Ascienda a la Montaña de Colores. Maravíllese con las espectaculares franjas minerales de Vinicunca pintadas sobre el techo de los Andes.', en: 'Ascend to the Rainbow Mountain. Marvel at the spectacular mineral stripes of Vinicunca painted on the roof of the Andes.', pt: 'Ascenda à Montanha Colorida. Maravilhe-se com as espetaculares faixas minerais de Vinicunca pintadas sobre o teto dos Andes.' },
+    'scroll-text': { es: 'DESPLÁCESE PARA DESCUBRIR', en: 'SCROLL TO DISCOVER', pt: 'DESÇA PARA DESCOBRIR' },
 
     // Destinations section
-    'section-tagline-dest': { es: 'Destinos seleccionados', en: 'Selected destinations' },
-    'section-title-dest': { es: 'RECOMENDACIONES DE DESTINOS', en: 'DESTINATION RECOMMENDATIONS' },
-    'card-rank-1': { es: '1.º Lugar', en: '1st Place' },
-    'card-name-1': { es: 'Machu Picchu', en: 'Machu Picchu' },
-    'card-desc-1': { es: 'El legendario santuario en las nubes.', en: 'The legendary sanctuary in the clouds.' },
-    'card-btn-1': { es: 'EXPLORAR EXCURSIÓN <span class="arrow">→</span>', en: 'EXPLORE TOUR <span class="arrow">→</span>' },
-    'card-rank-2': { es: '2.º Lugar', en: '2nd Place' },
-    'card-name-2': { es: 'Sacsayhuamán', en: 'Sacsayhuamán' },
-    'card-desc-2': { es: 'Baluartes de piedra del valle de Cusco.', en: 'Stone bastions of the Cusco valley.' },
-    'card-rank-3': { es: '3.º Lugar', en: '3rd Place' },
-    'card-name-3': { es: 'Písac', en: 'Písac' },
-    'card-desc-3': { es: 'Sistemas de terrazas y mercados tradicionales.', en: 'Terrace systems and traditional markets.' },
-    'card-rank-4': { es: '4.º Lugar', en: '4th Place' },
-    'card-name-4': { es: 'Ollantaytambo', en: 'Ollantaytambo' },
-    'card-desc-4': { es: 'Pueblo inca viviente y fortaleza real.', en: 'Living Inca village and royal fortress.' },
-    'card-rank-5': { es: '5.º Lugar', en: '5th Place' },
-    'card-name-5': { es: 'Montaña de Colores', en: 'Rainbow Mountain' },
-    'card-desc-5': { es: 'Espectaculares pigmentos geológicos de Vinicunca.', en: 'Spectacular geological pigments of Vinicunca.' },
+    'section-tagline-dest': { es: 'Destinos seleccionados', en: 'Selected destinations', pt: 'Destinos selecionados' },
+    'section-title-dest': { es: 'RECOMENDACIONES DE DESTINOS', en: 'DESTINATION RECOMMENDATIONS', pt: 'RECOMENDAÇÕES DE DESTINOS' },
+    'card-rank-1': { es: '1.º Lugar', en: '1st Place', pt: '1.º Lugar' },
+    'card-name-1': { es: 'Machu Picchu', en: 'Machu Picchu', pt: 'Machu Picchu' },
+    'card-desc-1': { es: 'El legendario santuario en las nubes.', en: 'The legendary sanctuary in the clouds.', pt: 'O lendário santuário nas nuvens.' },
+    'card-btn-1': { es: 'EXPLORAR EXCURSIÓN <span class="arrow">→</span>', en: 'EXPLORE TOUR <span class="arrow">→</span>', pt: 'EXPLORAR PASSEIO <span class="arrow">→</span>' },
+    'card-rank-2': { es: '2.º Lugar', en: '2nd Place', pt: '2.º Lugar' },
+    'card-name-2': { es: 'Sacsayhuamán', en: 'Sacsayhuamán', pt: 'Sacsayhuamán' },
+    'card-desc-2': { es: 'Baluartes de piedra del valle de Cusco.', en: 'Stone bastions of the Cusco valley.', pt: 'Baluartes de pedra do vale de Cusco.' },
+    'card-rank-3': { es: '3.º Lugar', en: '3rd Place', pt: '3.º Lugar' },
+    'card-name-3': { es: 'Písac', en: 'Písac', pt: 'Písac' },
+    'card-desc-3': { es: 'Sistemas de terrazas y mercados tradicionales.', en: 'Terrace systems and traditional markets.', pt: 'Sistemas de terraços e mercados tradicionais.' },
+    'card-rank-4': { es: '4.º Lugar', en: '4th Place', pt: '4.º Lugar' },
+    'card-name-4': { es: 'Ollantaytambo', en: 'Ollantaytambo', pt: 'Ollantaytambo' },
+    'card-desc-4': { es: 'Pueblo inca viviente y fortaleza real.', en: 'Living Inca village and royal fortress.', pt: 'Vila inca viva e fortaleza real.' },
+    'card-rank-5': { es: '5.º Lugar', en: '5th Place', pt: '5.º Lugar' },
+    'card-name-5': { es: 'Montaña de Colores', en: 'Rainbow Mountain', pt: 'Montanha Colorida' },
+    'card-desc-5': { es: 'Espectaculares pigmentos geológicos de Vinicunca.', en: 'Spectacular geological pigments of Vinicunca.', pt: 'Espetaculares pigmentos geológicos de Vinicunca.' },
 
     // Travel & Enjoy
-    'enjoy-title': { es: 'VIAJE Y<br>DISFRUTE SUS<br>VACACIONES', en: 'TRAVEL AND<br>ENJOY YOUR<br>VACATION' },
-    'enjoy-text': { es: 'Viva las maravillas ancestrales del Perú a través de paisajes imponentes, historia inca y aventuras inolvidables.', en: 'Experience the ancestral wonders of Peru through imposing landscapes, Inca history and unforgettable adventures.' },
-    'book-exp-btn': { es: 'Reservar Experiencia', en: 'Book Experience' },
+    'enjoy-title': { es: 'VIAJE Y<br>DISFRUTE SUS<br>VACACIONES', en: 'TRAVEL AND<br>ENJOY YOUR<br>VACATION', pt: 'VIAJE E<br>APROVEITE SUAS<br>FÉRIAS' },
+    'enjoy-text': { es: 'Viva las maravillas ancestrales del Perú a través de paisajes imponentes, historia inca y aventuras inolvidables.', en: 'Experience the ancestral wonders of Peru through imposing landscapes, Inca history and unforgettable adventures.', pt: 'Viva as maravilhas ancestrais do Peru através de paisagens imponentes, história inca e aventuras inesquecíveis.' },
+    'book-exp-btn': { es: 'Reservar Experiencia', en: 'Book Experience', pt: 'Reservar Experiência' },
 
     // Tours section
-    'tours-tagline': { es: 'Itinerarios selectos', en: 'Select itineraries' },
-    'tours-title': { es: 'TOURS POPULARES', en: 'POPULAR TOURS' },
-    'tour-name-mp': { es: 'TOUR MACHU PICCHU', en: 'MACHU PICCHU TOUR' },
-    'tour-name-sh': { es: 'TOUR SACSAYHUAMÁN', en: 'SACSAYHUAMÁN TOUR' },
-    'tour-name-pisac': { es: 'TOUR PÍSAC', en: 'PÍSAC TOUR' },
-    'tour-name-oll': { es: 'TOUR OLLANTAYTAMBO', en: 'OLLANTAYTAMBO TOUR' },
-    'tour-name-rm': { es: 'TOUR MONTAÑA DE COLORES', en: 'RAINBOW MOUNTAIN TOUR' },
-    'tour-feat-1': { es: 'Día Completo', en: 'Full Day' },
-    'tour-feat-2': { es: 'Guía Profesional', en: 'Professional Guide' },
-    'tour-feat-3': { es: 'Transporte Incluido', en: 'Transport Included' },
-    'tour-feat-4': { es: 'Experiencia del Amanecer', en: 'Sunrise Experience' },
-    'tour-feat-5': { es: 'Medio Día', en: 'Half Day' },
-    'tour-feat-6': { es: 'Tour Histórico', en: 'Historical Tour' },
-    'tour-feat-7': { es: 'Experiencia Cultural', en: 'Cultural Experience' },
-    'tour-feat-8': { es: 'Transporte Privado', en: 'Private Transport' },
-    'tour-feat-9': { es: 'Sitio Arqueológico', en: 'Archaeological Site' },
-    'tour-feat-10': { es: 'Mercado Tradicional', en: 'Traditional Market' },
-    'tour-feat-11': { es: 'Experiencia Guiada', en: 'Guided Experience' },
-    'tour-feat-12': { es: 'Almuerzo Buffet', en: 'Buffet Lunch' },
-    'tour-feat-13': { es: 'Valle Sagrado', en: 'Sacred Valley' },
-    'tour-feat-14': { es: 'Arquitectura Inca', en: 'Inca Architecture' },
-    'tour-feat-15': { es: 'Grupo Reducido', en: 'Small Group' },
-    'tour-feat-16': { es: 'Aventura de Senderismo', en: 'Hiking Adventure' },
-    'tour-feat-17': { es: 'Desayuno y Almuerzo Incluidos', en: 'Breakfast & Lunch Included' },
-    'tour-feat-18': { es: 'Vistas Panorámicas', en: 'Panoramic Views' },
-    'tour-feat-19': { es: 'Kit de Oxígeno Provisto', en: 'Oxygen Kit Provided' },
-    'tour-tag-mp': { es: 'Favorito', en: 'Favorite' },
-    'tour-btn-text': { es: 'Reservar Tour', en: 'Book Tour' },
+    'tours-tagline': { es: 'Itinerarios selectos', en: 'Select itineraries', pt: 'Itinerários selecionados' },
+    'tours-title': { es: 'TOURS POPULARES', en: 'POPULAR TOURS', pt: 'PASSEIOS POPULARES' },
+    'tour-name-mp': { es: 'TOUR MACHU PICCHU', en: 'MACHU PICCHU TOUR', pt: 'PASSEIO MACHU PICCHU' },
+    'tour-name-sh': { es: 'TOUR SACSAYHUAMÁN', en: 'SACSAYHUAMÁN TOUR', pt: 'PASSEIO SACSAYHUAMÁN' },
+    'tour-name-pisac': { es: 'TOUR PÍSAC', en: 'PÍSAC TOUR', pt: 'PASSEIO PÍSAC' },
+    'tour-name-oll': { es: 'TOUR OLLANTAYTAMBO', en: 'OLLANTAYTAMBO TOUR', pt: 'PASSEIO OLLANTAYTAMBO' },
+    'tour-name-rm': { es: 'TOUR MONTAÑA DE COLORES', en: 'RAINBOW MOUNTAIN TOUR', pt: 'PASSEIO MONTANHA COLORIDA' },
+    'tour-feat-1': { es: 'Día Completo', en: 'Full Day', pt: 'Dia Completo' },
+    'tour-feat-2': { es: 'Guía Profesional', en: 'Professional Guide', pt: 'Guia Profissional' },
+    'tour-feat-3': { es: 'Transporte Incluido', en: 'Transport Included', pt: 'Transporte Incluso' },
+    'tour-feat-4': { es: 'Experiencia del Amanecer', en: 'Sunrise Experience', pt: 'Experiência do Amanhecer' },
+    'tour-feat-5': { es: 'Medio Día', en: 'Half Day', pt: 'Meio Dia' },
+    'tour-feat-6': { es: 'Tour Histórico', en: 'Historical Tour', pt: 'Passeio Histórico' },
+    'tour-feat-7': { es: 'Experiencia Cultural', en: 'Cultural Experience', pt: 'Experiência Cultural' },
+    'tour-feat-8': { es: 'Transporte Privado', en: 'Private Transport', pt: 'Transporte Privado' },
+    'tour-feat-9': { es: 'Sitio Arqueológico', en: 'Archaeological Site', pt: 'Sítio Arqueológico' },
+    'tour-feat-10': { es: 'Mercado Tradicional', en: 'Traditional Market', pt: 'Mercado Tradicional' },
+    'tour-feat-11': { es: 'Experiencia Guiada', en: 'Guided Experience', pt: 'Experiência Guiada' },
+    'tour-feat-12': { es: 'Almuerzo Buffet', en: 'Buffet Lunch', pt: 'Almoço Buffet' },
+    'tour-feat-13': { es: 'Valle Sagrado', en: 'Sacred Valley', pt: 'Vale Sagrado' },
+    'tour-feat-14': { es: 'Arquitectura Inca', en: 'Inca Architecture', pt: 'Arquitetura Inca' },
+    'tour-feat-15': { es: 'Grupo Reducido', en: 'Small Group', pt: 'Grupo Reduzido' },
+    'tour-feat-16': { es: 'Aventura de Senderismo', en: 'Hiking Adventure', pt: 'Aventura de Caminhada' },
+    'tour-feat-17': { es: 'Desayuno y Almuerzo Incluidos', en: 'Breakfast & Lunch Included', pt: 'Café da Manhã e Almoço Inclusos' },
+    'tour-feat-18': { es: 'Vistas Panorámicas', en: 'Panoramic Views', pt: 'Vistas Panorâmicas' },
+    'tour-feat-19': { es: 'Kit de Oxígeno Provisto', en: 'Oxygen Kit Provided', pt: 'Kit de Oxigênio Fornecido' },
+    'tour-tag-mp': { es: 'Favorito', en: 'Favorite', pt: 'Favorito' },
+    'tour-btn-text': { es: 'Reservar Tour', en: 'Book Tour', pt: 'Reservar Passeio' },
 
     // Stats
-    'stat-1-num': { es: 'Visitantes Satisfechos', en: 'Satisfied Visitors' },
-    'stat-2-num': { es: 'Tours Guiados', en: 'Guided Tours' },
-    'stat-3-num': { es: 'Años de Experiencia', en: 'Years of Experience' },
-    'stat-4-num': { es: 'Tasa de Satisfacción', en: 'Satisfaction Rate' },
+    'stat-1-num': { es: 'Visitantes Satisfechos', en: 'Satisfied Visitors', pt: 'Visitantes Satisfeitos' },
+    'stat-2-num': { es: 'Tours Guiados', en: 'Guided Tours', pt: 'Passeios Guiados' },
+    'stat-3-num': { es: 'Años de Experiencia', en: 'Years of Experience', pt: 'Anos de Experiência' },
+    'stat-4-num': { es: 'Tasa de Satisfacción', en: 'Satisfaction Rate', pt: 'Taxa de Satisfação' },
 
     // Expedition timeline
-    'exp-tagline': { es: 'Viaje Exclusivo', en: 'Exclusive Journey' },
-    'exp-title': { es: 'CRONOGRAMA DE EXPEDICIÓN VIP DE 7 DÍAS', en: '7-DAY VIP EXPEDITION SCHEDULE' },
-    'day-01': { es: 'BIENVENIDA', en: 'WELCOME' },
-    'day-02': { es: 'VALLE SAGRADO', en: 'SACRED VALLEY' },
-    'day-03': { es: 'FORTALEZA', en: 'FORTRESS' },
-    'day-04': { es: 'PUEBLO VIVO', en: 'LIVING TOWN' },
-    'day-05': { es: 'MACHU PICCHU', en: 'MACHU PICCHU' },
-    'day-06': { es: 'MONTAÑA DE COLORES', en: 'RAINBOW MOUNTAIN' },
-    'day-07': { es: 'DESPEDIDA', en: 'FAREWELL' },
+    'exp-tagline': { es: 'Viaje Exclusivo', en: 'Exclusive Journey', pt: 'Viagem Exclusiva' },
+    'exp-title': { es: 'CRONOGRAMA DE EXPEDICIÓN VIP DE 7 DÍAS', en: '7-DAY VIP EXPEDITION SCHEDULE', pt: 'CRONOGRAMA DE EXPEDIÇÃO VIP DE 7 DIAS' },
+    'day-01': { es: 'BIENVENIDA', en: 'WELCOME', pt: 'BOAS-VINDAS' },
+    'day-02': { es: 'VALLE SAGRADO', en: 'SACRED VALLEY', pt: 'VALE SAGRADO' },
+    'day-03': { es: 'FORTALEZA', en: 'FORTRESS', pt: 'FORTALEZA' },
+    'day-04': { es: 'PUEBLO VIVO', en: 'LIVING TOWN', pt: 'VILA VIVA' },
+    'day-05': { es: 'MACHU PICCHU', en: 'MACHU PICCHU', pt: 'MACHU PICCHU' },
+    'day-06': { es: 'MONTAÑA DE COLORES', en: 'RAINBOW MOUNTAIN', pt: 'MONTANHA COLORIDA' },
+    'day-07': { es: 'DESPEDIDA', en: 'FAREWELL', pt: 'DESPEDIDA' },
 
     // Gallery
-    'gallery-tagline': { es: 'Viaje Visual', en: 'Visual Journey' },
-    'gallery-title': { es: 'GALERÍA PREMIUM', en: 'PREMIUM GALLERY' },
+    'gallery-tagline': { es: 'Viaje Visual', en: 'Visual Journey', pt: 'Viagem Visual' },
+    'gallery-title': { es: 'GALERÍA PREMIUM', en: 'PREMIUM GALLERY', pt: 'GALERIA PREMIUM' },
 
     // Testimonials
-    'testimonial-1-text': { es: '"Uno de los viajes más increíbles de mi vida. Los detalles, los paisajes y los guías privados fueron de primera clase mundial. Cusco Travel nos hizo sentir como de la realeza mientras explorábamos Machu Picchu."', en: '"One of the most incredible trips of my life. The details, the landscapes and the private guides were world-class. Cusco Travel made us feel like royalty while exploring Machu Picchu."' },
-    'testimonial-2-text': { es: '"Todo fue perfecto. Los traslados privados, las explicaciones arqueológicas locales y las vistas impresionantes. ¡Recorrer Ollantaytambo con su guía experto fue inolvidable!"', en: '"Everything was perfect. The private transfers, the local archaeological explanations and the stunning views. Touring Ollantaytambo with their expert guide was unforgettable!"' },
-    'testimonial-author-1': { es: 'David Harrison', en: 'David Harrison' },
-    'testimonial-author-2': { es: 'Sophia Martinez', en: 'Sophia Martinez' },
-    'testimonial-country-1': { es: 'Reino Unido', en: 'United Kingdom' },
-    'testimonial-country-2': { es: 'Estados Unidos', en: 'United States' },
+    'testimonial-1-text': { es: '"Uno de los viajes más increíbles de mi vida. Los detalles, los paisajes y los guías privados fueron de primera clase mundial. Cusco Travel nos hizo sentir como de la realeza mientras explorábamos Machu Picchu."', en: '"One of the most incredible trips of my life. The details, the landscapes and the private guides were world-class. Cusco Travel made us feel like royalty while exploring Machu Picchu."', pt: '"Uma das viagens mais incríveis da minha vida. Os detalhes, as paisagens e os guias privados foram de primeira classe mundial. A Cusco Travel nos fez sentir como realeza enquanto explorávamos Machu Picchu."' },
+    'testimonial-2-text': { es: '"Todo fue perfecto. Los traslados privados, las explicaciones arqueológicas locales y las vistas impresionantes. ¡Recorrer Ollantaytambo con su guía experto fue inolvidable!"', en: '"Everything was perfect. The private transfers, the local archaeological explanations and the stunning views. Touring Ollantaytambo with their expert guide was unforgettable!"', pt: '"Tudo foi perfeito. Os traslados privados, as explicações arqueológicas locais e as vistas impressionantes. Percorrer Ollantaytambo com seu guia experiente foi inesquecível!"' },
+    'testimonial-author-1': { es: 'David Harrison', en: 'David Harrison', pt: 'David Harrison' },
+    'testimonial-author-2': { es: 'Sophia Martinez', en: 'Sophia Martinez', pt: 'Sophia Martinez' },
+    'testimonial-country-1': { es: 'Reino Unido', en: 'United Kingdom', pt: 'Reino Unido' },
+    'testimonial-country-2': { es: 'Estados Unidos', en: 'United States', pt: 'Estados Unidos' },
 
     // Map
-    'map-tagline': { es: 'Viaje Interactivo', en: 'Interactive Journey' },
-    'map-title': { es: 'MAPA DE EXPEDICIÓN DEL VALLE SAGRADO', en: 'SACRED VALLEY EXPEDITION MAP' },
-    'map-info-tag': { es: 'Lugar Destacado', en: 'Featured Location' },
-    'map-alt-label': { es: 'Altitud:', en: 'Altitude:' },
-    'map-time-label': { es: 'Tiempo de Viaje:', en: 'Travel Time:' },
-    'map-exc-label': { es: 'Excursión:', en: 'Excursion:' },
-    'map-tour-btn': { es: 'Ver Excursión', en: 'View Excursion' },
+    'map-tagline': { es: 'Viaje Interactivo', en: 'Interactive Journey', pt: 'Viagem Interativa' },
+    'map-title': { es: 'MAPA DE EXPEDICIÓN DEL VALLE SAGRADO', en: 'SACRED VALLEY EXPEDITION MAP', pt: 'MAPA DE EXPEDIÇÃO DO VALE SAGRADO' },
+    'map-info-tag': { es: 'Lugar Destacado', en: 'Featured Location', pt: 'Local em Destaque' },
+    'map-alt-label': { es: 'Altitud:', en: 'Altitude:', pt: 'Altitude:' },
+    'map-time-label': { es: 'Tiempo de Viaje:', en: 'Travel Time:', pt: 'Tempo de Viagem:' },
+    'map-exc-label': { es: 'Excursión:', en: 'Excursion:', pt: 'Excursão:' },
+    'map-tour-btn': { es: 'Ver Excursión', en: 'View Excursion', pt: 'Ver Excursão' },
 
     // Stargazing
-    'star-tagline': { es: 'Cosmología Andina Celestial', en: 'Celestial Andean Cosmology' },
-    'star-title': { es: 'CIELO INTERACTIVO DE OBSERVACIÓN DE ESTRELLAS INCA', en: 'INTERACTIVE INCA STARGAZING SKY' },
-    'star-intro': { es: 'Los Incas observaban el cielo nocturno de Cusco no solo como estrellas individuales, sino como estructuras cósmicas profundas. Pase el cursor (o toque en el móvil) sobre las constelaciones brillantes para trazar sus formas y descubrir sus leyendas.', en: 'The Incas observed the Cusco night sky not just as individual stars, but as profound cosmic structures. Hover (or tap on mobile) over the bright constellations to trace their shapes and discover their legends.' },
-    'visor-label': { es: 'VISOR ACTIVO', en: 'ACTIVE VIEWFINDER' },
+    'star-tagline': { es: 'Cosmología Andina Celestial', en: 'Celestial Andean Cosmology', pt: 'Cosmologia Andina Celestial' },
+    'star-title': { es: 'CIELO INTERACTIVO DE OBSERVACIÓN DE ESTRELLAS INCA', en: 'INTERACTIVE INCA STARGAZING SKY', pt: 'CÉU INTERATIVO DE OBSERVAÇÃO DE ESTRELAS INCA' },
+    'star-intro': { es: 'Los Incas observaban el cielo nocturno de Cusco no solo como estrellas individuales, sino como estructuras cósmicas profundas. Pase el cursor (o toque en el móvil) sobre las constelaciones brillantes para trazar sus formas y descubrir sus leyendas.', en: 'The Incas observed the Cusco night sky not just as individual stars, but as profound cosmic structures. Hover (or tap on mobile) over the bright constellations to trace their shapes and discover their legends.', pt: 'Os Incas observavam o céu noturno de Cusco não apenas como estrelas individuais, mas como estruturas cósmicas profundas. Passe o cursor (ou toque no celular) sobre as constelações brilhantes para traçar suas formas e descobrir suas lendas.' },
+    'visor-label': { es: 'VISOR ACTIVO', en: 'ACTIVE VIEWFINDER', pt: 'VISOR ATIVO' },
 
     // Footer
-    'footer-desc': { es: 'Experiencias de lujo a través del corazón del Imperio Inca. Ofrecemos tours privados a medida, historiadores expertos locales y alojamientos de ultra-lujo.', en: 'Luxury experiences through the heart of the Inca Empire. We offer bespoke private tours, local expert historians and ultra-luxury accommodation.' },
-    'footer-title-links': { es: 'Enlaces Rápidos', en: 'Quick Links' },
-    'footer-title-contact': { es: 'Contáctenos', en: 'Contact Us' },
-    'footer-copyright': { es: '&copy; 2026 Cusco Travel. Todos los derechos reservados.', en: '&copy; 2026 Cusco Travel. All rights reserved.' },
-    'footer-tagline': { es: 'Diseñado para Exploradores de Lujo.', en: 'Designed for Luxury Explorers.' },
+    'footer-desc': { es: 'Experiencias de lujo a través del corazón del Imperio Inca. Ofrecemos tours privados a medida, historiadores expertos locales y alojamientos de ultra-lujo.', en: 'Luxury experiences through the heart of the Inca Empire. We offer bespoke private tours, local expert historians and ultra-luxury accommodation.', pt: 'Experiências de luxo através do coração do Império Inca. Oferecemos passeios privados sob medida, historiadores especialistas locais e hospedagens de ultra-luxo.' },
+    'footer-title-links': { es: 'Enlaces Rápidos', en: 'Quick Links', pt: 'Links Rápidos' },
+    'footer-title-contact': { es: 'Contáctenos', en: 'Contact Us', pt: 'Fale Conosco' },
+    'footer-copyright': { es: '&copy; 2026 Cusco Travel. Todos los derechos reservados.', en: '&copy; 2026 Cusco Travel. All rights reserved.', pt: '&copy; 2026 Cusco Travel. Todos os direitos reservados.' },
+    'footer-tagline': { es: 'Diseñado para Exploradores de Lujo.', en: 'Designed for Luxury Explorers.', pt: 'Projetado para Exploradores de Luxo.' },
 
     // Booking modal
-    'booking-title': { es: 'Experiencia de Lujo Solicitada', en: 'Luxury Experience Requested' },
-    'booking-text': { es: 'Gracias por elegir Cusco Travel. Nuestro concierge de viajes privado se comunicará con usted a la brevedad para personalizar su itinerario de lujo.', en: 'Thank you for choosing Cusco Travel. Our private travel concierge will contact you shortly to customize your luxury itinerary.' },
-    'booking-ok': { es: 'Confirmar', en: 'Confirm' },
+    'booking-title': { es: 'Experiencia de Lujo Solicitada', en: 'Luxury Experience Requested', pt: 'Experiência de Luxo Solicitada' },
+    'booking-text': { es: 'Gracias por elegir Cusco Travel. Nuestro concierge de viajes privado se comunicará con usted a la brevedad para personalizar su itinerario de lujo.', en: 'Thank you for choosing Cusco Travel. Our private travel concierge will contact you shortly to customize your luxury itinerary.', pt: 'Obrigado por escolher a Cusco Travel. Nosso concierge de viagens privado entrará em contato em breve para personalizar seu itinerário de luxo.' },
+    'booking-ok': { es: 'Confirmar', en: 'Confirm', pt: 'Confirmar' },
 
     // Planner
-    'step-1-title': { es: 'Seleccione su estilo de viaje', en: 'Select your travel style' },
-    'step-1-desc': { es: 'Personalizando su experiencia de acuerdo a sus deseos personales.', en: 'Customizing your experience according to your personal wishes.' },
-    'step-2-title': { es: 'Duración y Huéspedes', en: 'Duration & Guests' },
-    'step-2-desc': { es: '¿Cuánto tiempo y con quién va a explorar?', en: 'How long and with whom will you explore?' },
-    'step-3-title': { es: 'Alojamiento Preferido', en: 'Preferred Lodging' },
-    'step-3-desc': { es: 'Seleccione dónde desea descansar después de sus excursiones.', en: 'Select where you wish to rest after your excursions.' },
-    'step-4-title': { es: 'Solicitar Itinerario', en: 'Request Itinerary' },
-    'step-4-desc': { es: 'Ingrese sus datos para generar su borrador de itinerario personalizado.', en: 'Enter your details to generate your personalized draft itinerary.' },
-    'planner-next': { es: 'Siguiente Paso →', en: 'Next Step →' },
-    'planner-back': { es: '← Atrás', en: '← Back' },
-    'planner-submit': { es: 'Crear Itinerario', en: 'Create Itinerary' },
-    'planner-finish': { es: 'Cerrar Planificador', en: 'Close Planner' },
-    'planner-success-title': { es: 'Su Borrador de Itinerario Personalizado', en: 'Your Personalized Draft Itinerary' },
-    'planner-name-label': { es: 'Nombre Completo', en: 'Full Name' },
-    'planner-email-label': { es: 'Correo Electrónico', en: 'Email Address' },
-    'planner-name-placeholder': { es: 'John Doe', en: 'John Doe' },
-    'planner-email-placeholder': { es: 'john@ejemplo.com', en: 'john@example.com' },
-    'planner-duration-label': { es: 'Duración (Días)', en: 'Duration (Days)' },
-    'planner-guests-label': { es: 'Huéspedes', en: 'Guests' },
+    'step-1-title': { es: 'Seleccione su estilo de viaje', en: 'Select your travel style', pt: 'Selecione seu estilo de viagem' },
+    'step-1-desc': { es: 'Personalizando su experiencia de acuerdo a sus deseos personales.', en: 'Customizing your experience according to your personal wishes.', pt: 'Personalizando sua experiência de acordo com seus desejos pessoais.' },
+    'step-2-title': { es: 'Duración y Huéspedes', en: 'Duration & Guests', pt: 'Duração e Hóspedes' },
+    'step-2-desc': { es: '¿Cuánto tiempo y con quién va a explorar?', en: 'How long and with whom will you explore?', pt: 'Quanto tempo e com quem você vai explorar?' },
+    'step-3-title': { es: 'Alojamiento Preferido', en: 'Preferred Lodging', pt: 'Hospedagem Preferida' },
+    'step-3-desc': { es: 'Seleccione dónde desea descansar después de sus excursiones.', en: 'Select where you wish to rest after your excursions.', pt: 'Selecione onde deseja descansar após suas excursões.' },
+    'step-4-title': { es: 'Solicitar Itinerario', en: 'Request Itinerary', pt: 'Solicitar Itinerário' },
+    'step-4-desc': { es: 'Ingrese sus datos para generar su borrador de itinerario personalizado.', en: 'Enter your details to generate your personalized draft itinerary.', pt: 'Insira seus dados para gerar seu rascunho de itinerário personalizado.' },
+    'planner-next': { es: 'Siguiente Paso →', en: 'Next Step →', pt: 'Próximo Passo →' },
+    'planner-back': { es: '← Atrás', en: '← Back', pt: '← Voltar' },
+    'planner-submit': { es: 'Crear Itinerario', en: 'Create Itinerary', pt: 'Criar Itinerário' },
+    'planner-finish': { es: 'Cerrar Planificador', en: 'Close Planner', pt: 'Fechar Planejador' },
+    'planner-success-title': { es: 'Su Borrador de Itinerario Personalizado', en: 'Your Personalized Draft Itinerary', pt: 'Seu Rascunho de Itinerário Personalizado' },
+    'planner-success-note': { es: 'Nuestro concierge de viajes privado ha recibido su solicitud y se pondrá en contacto por correo electrónico en los próximos 15 minutos para ultimar detalles.', en: 'Our private travel concierge has received your request and will contact you by email within 15 minutes to finalize details.', pt: 'Nosso concierge de viagens privado recebeu sua solicitação e entrará em contato por e-mail em até 15 minutos para finalizar os detalhes.' },
+    'planner-name-label': { es: 'Nombre Completo', en: 'Full Name', pt: 'Nome Completo' },
+    'planner-email-label': { es: 'Correo Electrónico', en: 'Email Address', pt: 'E-mail' },
+    'planner-name-placeholder': { es: 'John Doe', en: 'John Doe', pt: 'João Silva' },
+    'planner-email-placeholder': { es: 'john@ejemplo.com', en: 'john@example.com', pt: 'joao@exemplo.com' },
+    'planner-duration-label': { es: 'Duración (Días)', en: 'Duration (Days)', pt: 'Duração (Dias)' },
+    'planner-guests-label': { es: 'Huéspedes', en: 'Guests', pt: 'Hóspedes' },
+
+    // Planner options
+    'opt-style-1-label': { es: 'Arqueología e Historia', en: 'Archaeology & History', pt: 'Arqueologia e História' },
+    'opt-style-1-desc': { es: 'Explore templos sagrados con historiadores privados.', en: 'Explore sacred temples with private historians.', pt: 'Explore templos sagrados com historiadores privados.' },
+    'opt-style-2-label': { es: 'Aventura y Naturaleza', en: 'Adventure & Nature', pt: 'Aventura e Natureza' },
+    'opt-style-2-desc': { es: 'Caminatas privadas, valles montañosos y cumbres.', en: 'Private hikes, mountain valleys and peaks.', pt: 'Caminhadas privadas, vales montanhosos e picos.' },
+    'opt-style-3-label': { es: 'Bienestar y Lujo', en: 'Wellness & Luxury', pt: 'Bem-estar e Luxo' },
+    'opt-style-3-desc': { es: 'Rituales chamánicos, spas premium y trenes de lujo.', en: 'Shamanic rituals, premium spas and luxury trains.', pt: 'Rituais xamânicos, spas premium e trens de luxo.' },
+    'opt-hotel-1-label': { es: 'Hotel Boutique de 5 Estrellas', en: '5-Star Boutique Hotel', pt: 'Hotel Boutique 5 Estrelas' },
+    'opt-hotel-1-desc': { es: 'Casonas coloniales restauradas y hoteles monasterio.', en: 'Restored colonial mansions and monastery hotels.', pt: 'Casonas coloniais restauradas e hotéis mosteiro.' },
+    'opt-hotel-2-label': { es: 'Glamping de Eco-Lujo', en: 'Eco-Luxury Glamping', pt: 'Glamping de Eco-Luxo' },
+    'opt-hotel-2-desc': { es: 'Domos premium situados en el Valle Sagrado.', en: 'Premium domes located in the Sacred Valley.', pt: 'Domos premium situados no Vale Sagrado.' },
+    'opt-dur-1': { es: '3 - 5 Días', en: '3 - 5 Days', pt: '3 - 5 Dias' },
+    'opt-dur-2': { es: '6 - 9 Días', en: '6 - 9 Days', pt: '6 - 9 Dias' },
+    'opt-dur-3': { es: '10+ Días', en: '10+ Days', pt: '10+ Dias' },
+    'opt-guest-1': { es: '1 - 2 Huéspedes', en: '1 - 2 Guests', pt: '1 - 2 Hóspedes' },
+    'opt-guest-2': { es: '3 - 5 Huéspedes', en: '3 - 5 Guests', pt: '3 - 5 Hóspedes' },
+    'opt-guest-3': { es: '6+ Huéspedes (Chárter Privado)', en: '6+ Guests (Private Charter)', pt: '6+ Hóspedes (Charter Privado)' },
 
     // Cookie banner
-    'cookie-text': { es: 'Utilizamos cookies propias y de terceros para mejorar su experiencia. Al continuar navegando, acepta nuestra <a href="#contact" class="cookie-link">política de privacidad</a>.', en: 'We use own and third-party cookies to improve your experience. By continuing to browse, you accept our <a href="#contact" class="cookie-link">privacy policy</a>.' },
-    'cookie-btn': { es: 'Aceptar', en: 'Accept' },
+    'cookie-text': { es: 'Utilizamos cookies propias y de terceros para mejorar su experiencia. Al continuar navegando, acepta nuestra <a href="#contact" class="cookie-link">política de privacidad</a>.', en: 'We use own and third-party cookies to improve your experience. By continuing to browse, you accept our <a href="#contact" class="cookie-link">privacy policy</a>.', pt: 'Utilizamos cookies próprios e de terceiros para melhorar sua experiência. Ao continuar navegando, você aceita nossa <a href="#contact" class="cookie-link">política de privacidade</a>.' },
+    'cookie-btn': { es: 'Aceptar', en: 'Accept', pt: 'Aceitar' },
 
     // WhatsApp tooltip
-    'wa-tooltip': { es: 'Chatear con Concierge', en: 'Chat with Concierge' },
+    'wa-tooltip': { es: 'Chatear con Concierge', en: 'Chat with Concierge', pt: 'Conversar com Concierge' },
 };
 
 function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('cusco-lang', lang);
 
-    // Update button state
+    // Update button state and aria-label
     const langBtn = document.getElementById('lang-toggle');
     if (langBtn) {
-        if (lang === 'en') langBtn.classList.add('en-mode');
-        else langBtn.classList.remove('en-mode');
+        langBtn.classList.remove('es-mode', 'en-mode', 'pt-mode');
+        langBtn.classList.add(lang + '-mode');
+        const currentSpan = langBtn.querySelector('.lang-current');
+        const altSpan = langBtn.querySelector('.lang-alt');
+        if (currentSpan && altSpan) {
+            if (lang === 'es') { currentSpan.textContent = 'ES'; altSpan.textContent = 'EN'; }
+            else if (lang === 'en') { currentSpan.textContent = 'EN'; altSpan.textContent = 'PT'; }
+            else if (lang === 'pt') { currentSpan.textContent = 'PT'; altSpan.textContent = 'ES'; }
+        }
+        
+        const labels = { es: 'Cambiar idioma', en: 'Change language', pt: 'Mudar idioma' };
+        langBtn.setAttribute('aria-label', labels[lang] || labels.es);
     }
 
     // Apply translations to all elements with data-lang-key
     document.querySelectorAll('[data-lang-key]').forEach(el => {
         const key = el.getAttribute('data-lang-key');
         if (translations[key] && translations[key][lang]) {
-            // Preserve HTML content
-            el.innerHTML = translations[key][lang];
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = translations[key][lang];
+            } else {
+                el.innerHTML = translations[key][lang];
+            }
         }
     });
 }
@@ -241,7 +273,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const langToggle = document.getElementById('lang-toggle');
     if (langToggle) {
         langToggle.addEventListener('click', () => {
-            const newLang = currentLang === 'es' ? 'en' : 'es';
+            const order = ['es', 'en', 'pt'];
+            const idx = order.indexOf(currentLang);
+            const newLang = order[(idx + 1) % order.length];
             applyLanguage(newLang);
         });
     }
@@ -290,9 +324,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 3. HEADER SCROLL EFFECT
+    // 3. HEADER SCROLL EFFECT & STICKY MOBILE CTA
     // ==========================================
     const header = document.getElementById('header');
+    const stickyMobileCta = document.getElementById('sticky-mobile-cta');
+    const stickyCtaBtn = document.getElementById('sticky-cta-btn');
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -300,7 +336,28 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             header.classList.remove('scrolled');
         }
+        
+        if (stickyMobileCta) {
+            const scrollHeight = document.documentElement.scrollHeight;
+            const clientHeight = document.documentElement.clientHeight;
+            const currentScroll = window.scrollY;
+            
+            // Show sticky CTA when scrolled past hero (600px) and hide it when close to the footer (within 400px of bottom)
+            if (currentScroll > 600 && (scrollHeight - clientHeight - currentScroll) > 400) {
+                stickyMobileCta.classList.add('visible');
+            } else {
+                stickyMobileCta.classList.remove('visible');
+            }
+        }
     });
+
+    if (stickyCtaBtn) {
+        stickyCtaBtn.addEventListener('click', () => {
+            if (typeof openPlannerModal === 'function') {
+                openPlannerModal();
+            }
+        });
+    }
 
     // ==========================================
     // 4. MOBILE MENU (HAMBURGER & NAVIGATION)
@@ -1028,6 +1085,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const guests = document.getElementById('planner-guests').value;
         const lodging = plannerForm.querySelector('input[name="lodging"]:checked').value;
         const clientName = document.getElementById('planner-name').value;
+        const clientEmail = document.getElementById('planner-email').value;
+
+        // Store lead in localStorage
+        const lead = {
+            timestamp: new Date().toISOString(),
+            name: clientName,
+            email: clientEmail,
+            style: travelStyle,
+            duration: duration,
+            guests: guests,
+            lodging: lodging,
+            lang: currentLang
+        };
+        const leads = JSON.parse(localStorage.getItem('cusco-leads') || '[]');
+        leads.push(lead);
+        localStorage.setItem('cusco-leads', JSON.stringify(leads));
         
         let itineraryTitle = `Expedición Inca Personalizada`;
         let itineraryBullets = '';
@@ -1058,7 +1131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        const waMessage = `¡Hola Cusco Travel! Acabo de generar mi Borrador de Itinerario Personalizado para ${clientName}.
+        const waMessage = `¡Hola Cusco Travel! Acabo de generar mi Borrador de Itinerario Personalizado para ${clientName} (${clientEmail}).
 - Estilo: ${travelStyle}
 - Alojamiento: ${lodging}
 - Grupo: ${guests}
@@ -1071,12 +1144,14 @@ Me gustaría programar una llamada con un concierge privado para personalizarlo 
             <h4>${itineraryTitle}</h4>
             <ul class="itinerary-details-list">
                 <li><span>Cliente:</span><span>${clientName}</span></li>
+                <li><span>Email:</span><span>${clientEmail}</span></li>
                 <li><span>Estilo:</span><span>${travelStyle}</span></li>
                 <li><span>Grupo:</span><span>${guests}</span></li>
                 <li><span>Duración:</span><span>${duration}</span></li>
                 <li><span>Alojamiento:</span><span>${lodging}</span></li>
             </ul>
-            <ul class="itinerary-details-list" style="margin-top: 15px;">
+            <div class="itinerary-summary-divider"></div>
+            <ul class="itinerary-details-list">
                 ${itineraryBullets}
             </ul>
             <a href="${waUrl}" target="_blank" class="btn btn-primary btn-glow" id="btn-whatsapp-concierge" style="margin-top: 20px; width: 100%; text-align: center; display: inline-block;">CONTACTAR AL CONCIERGE <span class="arrow">→</span></a>
@@ -1199,7 +1274,7 @@ Me gustaría programar una llamada con un concierge privado para personalizarlo 
 
         themeToggleBtn.addEventListener('click', () => {
             const isCurrentlyLight = document.body.classList.contains('light-theme');
-            const targetBg = isCurrentlyLight ? '#050505' : '#F8F6F0';
+            const targetBg = isCurrentlyLight ? '#0A0A0C' : '#F8F6F0';
 
             // 1. Disable transition, instantly cover screen
             themeRevealOverlay.style.transition = 'none';
@@ -1229,6 +1304,16 @@ Me gustaría programar una llamada con un concierge privado para personalizarlo 
     // ==========================================
     const mapNodes = document.querySelectorAll('.map-node');
     const mapRoutes = document.querySelectorAll('.route-segment');
+    
+    // Initialize SVG paths for dynamic drawing animation
+    mapRoutes.forEach(route => {
+        if (typeof route.getTotalLength === 'function') {
+            const length = route.getTotalLength();
+            route.style.strokeDasharray = length;
+            route.style.strokeDashoffset = length;
+        }
+    });
+
     const tourLinkBtn = document.getElementById('map-tour-btn');
 
     const mapData = {
@@ -1267,74 +1352,90 @@ Me gustaría programar una llamada con un concierge privado para personalizarlo 
     };
 
     function highlightRoutes(nodeKey) {
-        // Clear all segment highlights
-        mapRoutes.forEach(route => route.classList.remove('active'));
+        // Clear all segment highlights and reset drawing offsets
+        mapRoutes.forEach(route => {
+            route.classList.remove('active');
+            if (typeof route.getTotalLength === 'function') {
+                const length = route.getTotalLength();
+                route.style.strokeDashoffset = length;
+            }
+        });
 
         // Highlight routes progressively based on travel path depth
+        const segmentsToDraw = [];
         if (nodeKey === 'pisac') {
-            document.getElementById('seg-cusco-pisac').classList.add('active');
+            segmentsToDraw.push('seg-cusco-pisac');
         } else if (nodeKey === 'ollanta') {
-            document.getElementById('seg-cusco-pisac').classList.add('active');
-            document.getElementById('seg-pisac-ollanta').classList.add('active');
+            segmentsToDraw.push('seg-cusco-pisac', 'seg-pisac-ollanta');
         } else if (nodeKey === 'machu-picchu') {
-            document.getElementById('seg-cusco-pisac').classList.add('active');
-            document.getElementById('seg-pisac-ollanta').classList.add('active');
-            document.getElementById('seg-ollanta-mp').classList.add('active');
+            segmentsToDraw.push('seg-cusco-pisac', 'seg-pisac-ollanta', 'seg-ollanta-mp');
+        }
+
+        // Draw and highlight the active segments
+        segmentsToDraw.forEach(segId => {
+            const seg = document.getElementById(segId);
+            if (seg) {
+                seg.classList.add('active');
+                seg.style.strokeDashoffset = '0';
+            }
+        });
+    }
+
+    function handleNodeActivation(node) {
+        const nodeKey = node.getAttribute('data-node');
+        const data = mapData[nodeKey];
+
+        if (data) {
+            // Update panel details with fade animations
+            const panelContent = document.getElementById('map-info-content');
+            const infoPanel = document.querySelector('.map-info-panel');
+            
+            panelContent.style.opacity = '0';
+            panelContent.style.transform = 'translateY(10px)';
+            panelContent.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+            if (infoPanel) {
+                infoPanel.classList.add('pulse-glow');
+                setTimeout(() => {
+                    infoPanel.classList.remove('pulse-glow');
+                }, 1200);
+            }
+
+            // Update active badge-bg highlight
+            document.querySelectorAll('.badge-bg').forEach(bg => bg.classList.remove('active'));
+            const activeBadge = node.querySelector('.badge-bg');
+            if (activeBadge) {
+                activeBadge.classList.add('active');
+            }
+
+            // Move the progress route tracker along the Bézier road path
+            const routeTracker = document.getElementById('route-tracker');
+            if (routeTracker) {
+                let distance = '0%';
+                if (nodeKey === 'pisac') distance = '32.6%';
+                else if (nodeKey === 'ollanta') distance = '67%';
+                else if (nodeKey === 'machu-picchu') distance = '100%';
+                routeTracker.style.offsetDistance = distance;
+            }
+
+            setTimeout(() => {
+                document.getElementById('map-landmark-name').textContent = data.name;
+                document.getElementById('map-altitude').textContent = data.altitude;
+                document.getElementById('map-time').textContent = data.time;
+                document.getElementById('map-guide').textContent = data.excursion;
+                document.getElementById('map-description').textContent = data.desc;
+                
+                panelContent.style.opacity = '1';
+                panelContent.style.transform = 'translateY(0)';
+            }, 300);
+
+            highlightRoutes(nodeKey);
         }
     }
 
     mapNodes.forEach(node => {
-        node.addEventListener('mouseenter', () => {
-            const nodeKey = node.getAttribute('data-node');
-            const data = mapData[nodeKey];
-
-            if (data) {
-                // Update panel details with fade animations
-                const panelContent = document.getElementById('map-info-content');
-                const infoPanel = document.querySelector('.map-info-panel');
-                
-                panelContent.style.opacity = '0';
-                panelContent.style.transform = 'translateY(10px)';
-                panelContent.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-
-                if (infoPanel) {
-                    infoPanel.classList.add('pulse-glow');
-                    setTimeout(() => {
-                        infoPanel.classList.remove('pulse-glow');
-                    }, 1200);
-                }
-
-                // Update active badge-bg highlight
-                document.querySelectorAll('.badge-bg').forEach(bg => bg.classList.remove('active'));
-                const activeBadge = node.querySelector('.badge-bg');
-                if (activeBadge) {
-                    activeBadge.classList.add('active');
-                }
-
-                // Move the progress route tracker along the Bézier road path
-                const routeTracker = document.getElementById('route-tracker');
-                if (routeTracker) {
-                    let distance = '0%';
-                    if (nodeKey === 'pisac') distance = '32.6%';
-                    else if (nodeKey === 'ollanta') distance = '67%';
-                    else if (nodeKey === 'machu-picchu') distance = '100%';
-                    routeTracker.style.offsetDistance = distance;
-                }
-
-                setTimeout(() => {
-                    document.getElementById('map-landmark-name').textContent = data.name;
-                    document.getElementById('map-altitude').textContent = data.altitude;
-                    document.getElementById('map-time').textContent = data.time;
-                    document.getElementById('map-guide').textContent = data.excursion;
-                    document.getElementById('map-description').textContent = data.desc;
-                    
-                    panelContent.style.opacity = '1';
-                    panelContent.style.transform = 'translateY(0)';
-                }, 300);
-
-                highlightRoutes(nodeKey);
-            }
-        });
+        node.addEventListener('mouseenter', () => handleNodeActivation(node));
+        node.addEventListener('click', () => handleNodeActivation(node));
     });
 
     // Wire vector map button to scroll to tours section and highlight target card
@@ -1673,7 +1774,7 @@ Me gustaría programar una llamada con un concierge privado para personalizarlo 
                 rep: "La Sagrada Cruz Andina",
                 myth: "La Cruz del Sur representa los tres niveles de la existencia inca: Hana Pacha (el mundo superior de los espíritus), Kay Pacha (el mundo terrenal) y Ukhu Pacha (el inframundo de los ancestros). Es el puente de la vida.",
                 center: { x: 0.70, y: 0.32, radius: 80 },
-                color: "#ff2d2d", // Red glow
+                color: "#C5A880", // Champagne gold
                 nodes: [
                     { x: 0.70, y: 0.18 }, // Top
                     { x: 0.70, y: 0.46 }, // Bottom
@@ -1829,6 +1930,14 @@ Me gustaría programar una llamada con un concierge privado para personalizarlo 
             // 2. Draw constellations
             constellations.forEach(c => {
                 const isActive = constellationActive === c;
+                
+                // Animate progress
+                if (isActive) {
+                    c.progress = Math.min(1, (c.progress || 0) + 0.04);
+                } else {
+                    c.progress = Math.max(0, (c.progress || 0) - 0.08);
+                }
+
                 const cx = c.center.x * canvasWidth;
                 const cy = c.center.y * canvasHeight;
                 
@@ -1839,16 +1948,22 @@ Me gustaría programar una llamada con un concierge privado para personalizarlo 
                 }));
                 
                 // Draw connecting vectors
-                ctx.strokeStyle = isActive ? c.color : 'rgba(255,255,255,0.06)';
-                ctx.lineWidth = isActive ? 1.5 : 0.8;
-                ctx.beginPath();
-                c.lines.forEach(line => {
-                    const start = nodePixels[line[0]];
-                    const end = nodePixels[line[1]];
-                    ctx.moveTo(start.x, start.y);
-                    ctx.lineTo(end.x, end.y);
-                });
-                ctx.stroke();
+                const progress = c.progress || 0;
+                if (progress > 0) {
+                    ctx.strokeStyle = isActive ? c.color : 'rgba(255,255,255,0.06)';
+                    ctx.lineWidth = isActive ? 1.5 : 0.8;
+                    ctx.beginPath();
+                    c.lines.forEach(line => {
+                        const start = nodePixels[line[0]];
+                        const end = nodePixels[line[1]];
+                        ctx.moveTo(start.x, start.y);
+                        // Interpolate coordinates based on progress for vector drawing effect
+                        const currentX = start.x + (end.x - start.x) * progress;
+                        const currentY = start.y + (end.y - start.y) * progress;
+                        ctx.lineTo(currentX, currentY);
+                    });
+                    ctx.stroke();
+                }
                 
                 // Draw stars/nodes
                 nodePixels.forEach(n => {
@@ -1871,7 +1986,7 @@ Me gustaría programar una llamada con un concierge privado para personalizarlo 
                 
                 // Draw subtle active boundary ring
                 if (isActive) {
-                    ctx.strokeStyle = `rgba(${c.key === 'chakana' ? '255,45,45' : '226,186,73'}, 0.15)`;
+                    ctx.strokeStyle = 'rgba(212, 175, 55, 0.15)';
                     ctx.lineWidth = 1;
                     ctx.setLineDash([4, 4]);
                     ctx.beginPath();

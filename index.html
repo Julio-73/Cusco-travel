@@ -54,7 +54,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Main Style Sheet -->
-    <link rel="stylesheet" href="style.css?v=1.8">
+    <link rel="stylesheet" href="style.css?v=1.9">
 </head>
 <body>
 
@@ -122,7 +122,7 @@
             </div>
 
             <!-- Language Toggle Button -->
-            <button class="lang-toggle-btn" id="lang-toggle" aria-label="Cambiar idioma">
+            <button class="lang-toggle-btn" id="lang-toggle" aria-label="Cambiar idioma / Change language / Mudar idioma">
                 <span class="lang-current">ES</span>
                 <span class="lang-divider">|</span>
                 <span class="lang-alt">EN</span>
@@ -804,6 +804,7 @@
                         <!-- Interactive Nodes -->
                         <!-- Cusco -->
                         <g class="map-node" data-node="cusco" id="node-cusco">
+                            <circle cx="620" cy="330" r="28" fill="transparent" style="cursor: pointer; pointer-events: all;"/>
                             <circle cx="620" cy="330" r="12" class="node-tick-ring" stroke="var(--accent)" stroke-width="0.8" fill="none" stroke-dasharray="2 3" opacity="0.35"/>
                             <line x1="604" y1="330" x2="636" y2="330" class="node-crosshair" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
                             <line x1="620" y1="314" x2="620" y2="346" class="node-crosshair" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
@@ -818,6 +819,7 @@
 
                         <!-- Pisac -->
                         <g class="map-node" data-node="pisac" id="node-pisac">
+                            <circle cx="480" cy="220" r="28" fill="transparent" style="cursor: pointer; pointer-events: all;"/>
                             <circle cx="480" cy="220" r="12" class="node-tick-ring" stroke="var(--accent)" stroke-width="0.8" fill="none" stroke-dasharray="2 3" opacity="0.35"/>
                             <line x1="464" y1="220" x2="496" y2="220" class="node-crosshair" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
                             <line x1="480" y1="204" x2="480" y2="236" class="node-crosshair" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
@@ -832,6 +834,7 @@
 
                         <!-- Ollantaytambo -->
                         <g class="map-node" data-node="ollanta" id="node-ollanta">
+                            <circle cx="300" cy="170" r="28" fill="transparent" style="cursor: pointer; pointer-events: all;"/>
                             <circle cx="300" cy="170" r="12" class="node-tick-ring" stroke="var(--accent)" stroke-width="0.8" fill="none" stroke-dasharray="2 3" opacity="0.35"/>
                             <line x1="284" y1="170" x2="316" y2="170" class="node-crosshair" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
                             <line x1="300" y1="154" x2="300" y2="186" class="node-crosshair" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
@@ -846,6 +849,7 @@
 
                         <!-- Machu Picchu -->
                         <g class="map-node" data-node="machu-picchu" id="node-mp">
+                            <circle cx="130" cy="110" r="28" fill="transparent" style="cursor: pointer; pointer-events: all;"/>
                             <circle cx="130" cy="110" r="14" class="node-tick-ring" stroke="var(--accent)" stroke-width="0.8" fill="none" stroke-dasharray="2 3" opacity="0.4"/>
                             <line x1="112" y1="110" x2="148" y2="110" class="node-crosshair" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
                             <line x1="130" y1="92" x2="130" y2="128" class="node-crosshair" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
@@ -1050,22 +1054,22 @@
                     <div class="planner-options">
                         <label class="planner-opt-card" id="opt-style-1">
                             <input type="radio" name="travel-style" value="Arqueología e Historia" checked>
-                            <span class="opt-label">Arqueología e Historia</span>
-                            <span class="opt-desc">Explore templos sagrados con historiadores privados.</span>
+                            <span class="opt-label" data-lang-key="opt-style-1-label">Arqueología e Historia</span>
+                            <span class="opt-desc" data-lang-key="opt-style-1-desc">Explore templos sagrados con historiadores privados.</span>
                         </label>
                         <label class="planner-opt-card" id="opt-style-2">
                             <input type="radio" name="travel-style" value="Aventura y Naturaleza">
-                            <span class="opt-label">Aventura y Naturaleza</span>
-                            <span class="opt-desc">Caminatas privadas, valles montañosos y cumbres.</span>
+                            <span class="opt-label" data-lang-key="opt-style-2-label">Aventura y Naturaleza</span>
+                            <span class="opt-desc" data-lang-key="opt-style-2-desc">Caminatas privadas, valles montañosos y cumbres.</span>
                         </label>
                         <label class="planner-opt-card" id="opt-style-3">
                             <input type="radio" name="travel-style" value="Bienestar y Lujo">
-                            <span class="opt-label">Bienestar y Lujo</span>
-                            <span class="opt-desc">Rituales chamánicos, spas premium y trenes de lujo.</span>
+                            <span class="opt-label" data-lang-key="opt-style-3-label">Bienestar y Lujo</span>
+                            <span class="opt-desc" data-lang-key="opt-style-3-desc">Rituales chamánicos, spas premium y trenes de lujo.</span>
                         </label>
                     </div>
                     <div class="planner-buttons">
-                        <button type="button" class="btn btn-next-step" id="btn-next-1">Siguiente Paso →</button>
+                        <button type="button" class="btn btn-next-step" id="btn-next-1" data-lang-key="planner-next">Siguiente Paso →</button>
                     </div>
                 </div>
 
@@ -1075,25 +1079,25 @@
                     <p class="step-desc" data-lang-key="step-2-desc">¿Cuánto tiempo y con quién va a explorar?</p>
                     <div class="planner-inputs">
                         <div class="input-group">
-                            <label for="planner-duration">Duración (Días)</label>
+                            <label for="planner-duration" data-lang-key="planner-duration-label">Duración (Días)</label>
                             <select id="planner-duration" name="duration">
-                                <option value="3-5 Días">3 - 5 Días</option>
-                                <option value="6-9 Días" selected>6 - 9 Días</option>
-                                <option value="10+ Días">10+ Días</option>
+                                <option value="3-5 Días" data-lang-key="opt-dur-1">3 - 5 Días</option>
+                                <option value="6-9 Días" selected data-lang-key="opt-dur-2">6 - 9 Días</option>
+                                <option value="10+ Días" data-lang-key="opt-dur-3">10+ Días</option>
                             </select>
                         </div>
                         <div class="input-group">
-                            <label for="planner-guests">Huéspedes</label>
+                            <label for="planner-guests" data-lang-key="planner-guests-label">Huéspedes</label>
                             <select id="planner-guests" name="guests">
-                                <option value="1-2 Huéspedes" selected>1 - 2 Huéspedes</option>
-                                <option value="3-5 Huéspedes">3 - 5 Huéspedes</option>
-                                <option value="6+ Huéspedes">6+ Huéspedes (Chárter Privado)</option>
+                                <option value="1-2 Huéspedes" selected data-lang-key="opt-guest-1">1 - 2 Huéspedes</option>
+                                <option value="3-5 Huéspedes" data-lang-key="opt-guest-2">3 - 5 Huéspedes</option>
+                                <option value="6+ Huéspedes" data-lang-key="opt-guest-3">6+ Huéspedes (Chárter Privado)</option>
                             </select>
                         </div>
                     </div>
                     <div class="planner-buttons">
-                        <button type="button" class="btn btn-prev-step" id="btn-prev-2">← Atrás</button>
-                        <button type="button" class="btn btn-next-step" id="btn-next-2">Siguiente Paso →</button>
+                        <button type="button" class="btn btn-prev-step" id="btn-prev-2" data-lang-key="planner-back">← Atrás</button>
+                        <button type="button" class="btn btn-next-step" id="btn-next-2" data-lang-key="planner-next">Siguiente Paso →</button>
                     </div>
                 </div>
 
@@ -1104,18 +1108,18 @@
                     <div class="planner-options">
                         <label class="planner-opt-card" id="opt-hotel-1">
                             <input type="radio" name="lodging" value="Hotel Boutique de 5 Estrellas" checked>
-                            <span class="opt-label">Hotel Boutique de 5 Estrellas</span>
-                            <span class="opt-desc">Casonas coloniales restauradas y hoteles monasterio.</span>
+                            <span class="opt-label" data-lang-key="opt-hotel-1-label">Hotel Boutique de 5 Estrellas</span>
+                            <span class="opt-desc" data-lang-key="opt-hotel-1-desc">Casonas coloniales restauradas y hoteles monasterio.</span>
                         </label>
                         <label class="planner-opt-card" id="opt-hotel-2">
                             <input type="radio" name="lodging" value="Glamping de Eco-Lujo">
-                            <span class="opt-label">Glamping de Eco-Lujo</span>
-                            <span class="opt-desc">Domos premium situados en el Valle Sagrado.</span>
+                            <span class="opt-label" data-lang-key="opt-hotel-2-label">Glamping de Eco-Lujo</span>
+                            <span class="opt-desc" data-lang-key="opt-hotel-2-desc">Domos premium situados en el Valle Sagrado.</span>
                         </label>
                     </div>
                     <div class="planner-buttons">
-                        <button type="button" class="btn btn-prev-step" id="btn-prev-3">← Atrás</button>
-                        <button type="button" class="btn btn-next-step" id="btn-next-3">Siguiente Paso →</button>
+                        <button type="button" class="btn btn-prev-step" id="btn-prev-3" data-lang-key="planner-back">← Atrás</button>
+                        <button type="button" class="btn btn-next-step" id="btn-next-3" data-lang-key="planner-next">Siguiente Paso →</button>
                     </div>
                 </div>
 
@@ -1125,28 +1129,28 @@
                     <p class="step-desc" data-lang-key="step-4-desc">Ingrese sus datos para generar su borrador de itinerario personalizado.</p>
                     <div class="planner-inputs">
                         <div class="input-group">
-                            <label for="planner-name">Nombre Completo</label>
-                            <input type="text" id="planner-name" name="client-name" placeholder="John Doe" required>
+                            <label for="planner-name" data-lang-key="planner-name-label">Nombre Completo</label>
+                            <input type="text" id="planner-name" name="client-name" data-lang-key="planner-name-placeholder" placeholder="John Doe" required>
                         </div>
                         <div class="input-group">
-                            <label for="planner-email">Correo Electrónico</label>
-                            <input type="email" id="planner-email" name="client-email" placeholder="john@ejemplo.com" required>
+                            <label for="planner-email" data-lang-key="planner-email-label">Correo Electrónico</label>
+                            <input type="email" id="planner-email" name="client-email" data-lang-key="planner-email-placeholder" placeholder="john@ejemplo.com" required>
                         </div>
                     </div>
                     <div class="planner-buttons">
-                        <button type="button" class="btn btn-prev-step" id="btn-prev-4">← Atrás</button>
-                        <button type="submit" class="btn btn-primary btn-glow" id="btn-planner-submit">Crear Itinerario</button>
+                        <button type="button" class="btn btn-prev-step" id="btn-prev-4" data-lang-key="planner-back">← Atrás</button>
+                        <button type="submit" class="btn btn-primary btn-glow" id="btn-planner-submit" data-lang-key="planner-submit">Crear Itinerario</button>
                     </div>
                 </div>
 
                 <div class="planner-step planner-success-step" data-step="5">
                     <div class="booking-success-icon">✓</div>
-                    <h3>Su Borrador de Itinerario Personalizado</h3>
+                    <h3 data-lang-key="planner-success-title">Su Borrador de Itinerario Personalizado</h3>
                     <div class="itinerary-summary-card" id="itinerary-summary">
                         <!-- Dynamic summary filled by JS -->
                     </div>
-                    <p class="itinerary-footer-note">Nuestro concierge de viajes privado ha recibido su solicitud y se pondrá en contacto por correo electrónico en los próximos 15 minutos para ultimar detalles.</p>
-                    <button type="button" class="btn btn-primary btn-glow" id="btn-planner-finish">Cerrar Planificador</button>
+                    <p class="itinerary-footer-note" data-lang-key="planner-success-note">Nuestro concierge de viajes privado ha recibido su solicitud y se pondrá en contacto por correo electrónico en los próximos 15 minutos para ultimar detalles.</p>
+                    <button type="button" class="btn btn-primary btn-glow" id="btn-planner-finish" data-lang-key="planner-finish">Cerrar Planificador</button>
                 </div>
 
             </form>
@@ -1164,12 +1168,15 @@
         </div>
     </div>
 
-
-
     <!-- COOKIE CONSENT BANNER -->
     <div id="cookie-banner" class="cookie-banner">
         <p class="cookie-text" data-lang-key="cookie-text">Utilizamos cookies propias y de terceros para mejorar su experiencia. Al continuar navegando, acepta nuestra <a href="#contact" class="cookie-link">política de privacidad</a>.</p>
         <button class="btn btn-cookie" id="cookie-accept" data-lang-key="cookie-btn">Aceptar</button>
+    </div>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div id="sticky-mobile-cta" class="sticky-mobile-cta">
+        <button class="btn btn-primary btn-glow" id="sticky-cta-btn" data-lang-key="book-exp-btn">Reservar Experiencia</button>
     </div>
 
     <!-- Theme Reveal Overlay (for light/dark transition) -->
